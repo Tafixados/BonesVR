@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://model imports/bones/Left_arm/left_humerus.glb" type="PackedScene" id=1]
+[ext_resource path="res://Functions/PickableObjectTemplate.gd" type="Script" id=2]
+
+[sub_resource type="CylinderShape" id=15]
+radius = 0.0181904
+height = 0.323348
+
+[node name="Left_humerus" type="RigidBody"]
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 0.80916, -0.260307, 1.10013e-07, 0.258306, 0.802938, -0.105209, 0.0322194, 0.100154, 0.843464, -0.0108698, 0.0296452, 0 )
+shape = SubResource( 15 )
+
+[node name="left_humerus" parent="CollisionShape" instance=ExtResource( 1 )]
+transform = Transform( 0.951953, 0.303889, 0.0379052, -0.306244, 0.944633, 0.117828, -3.72529e-09, -0.123775, 0.99231, 0.00133869, -0.0313326, 0.00366932 )

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://model imports/bones/Left_leg/left_femur.glb" type="PackedScene" id=1]
+[ext_resource path="res://Functions/PickableObjectTemplate.gd" type="Script" id=2]
+
+[sub_resource type="CylinderShape" id=11]
+radius = 0.0195893
+height = 0.409779
+
+[node name="Left_femur" type="RigidBody"]
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 0.849541, 0.0277495, -0.00316852, -0.0279298, 0.844056, -0.096377, -3.95812e-10, 0.0964291, 0.844513, 0, -0.0145546, 0 )
+shape = SubResource( 11 )
+
+[node name="left_femur" parent="CollisionShape" instance=ExtResource( 1 )]
+transform = Transform( 0.99946, -0.0328586, 0, 0.0326465, 0.993008, 0.113446, -0.00372768, -0.113385, 0.993544, -0.000478244, 0.0144528, -0.00165027 )

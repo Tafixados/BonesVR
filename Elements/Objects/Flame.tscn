@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+flags_unshaded = true
+vertex_color_use_as_albedo = true
+params_blend_mode = 1
+params_billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id=2]
+
+[sub_resource type="Curve" id=3]
+_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.185507, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=4]
+offsets = PoolRealArray( 0, 0.987578 )
+colors = PoolColorArray( 0.99395, 1, 0.761719, 1, 0.961914, 0.280688, 0.078907, 1 )
+
+[node name="Flame" type="Spatial"]
+
+[node name="Fire" type="CPUParticles" parent="."]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.00160992, -0.00737774, -0.00244594 )
+material_override = SubResource( 1 )
+amount = 16
+lifetime = 0.8
+speed_scale = 0.6
+explosiveness = 0.1
+randomness = 0.4
+mesh = SubResource( 2 )
+emission_shape = 1
+emission_sphere_radius = 0.2
+direction = Vector3( 0, 1, 0 )
+gravity = Vector3( 0, 2, 0 )
+initial_velocity = 0.1
+angular_velocity = 30.0
+angular_velocity_random = 1.0
+linear_accel = 4.0
+angle = 360.0
+angle_random = 1.0
+scale_amount_curve = SubResource( 3 )
+color = Color( 0.92549, 0.52549, 0.262745, 1 )
+color_ramp = SubResource( 4 )
+
+[node name="OmniLight" type="OmniLight" parent="Fire"]
+transform = Transform( -1.45705e-07, 0, -3.33333, 0, 3.33333, 0, 3.33333, 0, -1.45705e-07, -0.0153549, 0.039037, 0.0649715 )
+light_color = Color( 0.945098, 1, 0.305882, 1 )

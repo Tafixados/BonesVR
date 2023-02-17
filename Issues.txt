@@ -1,0 +1,28 @@
+Transparency sorting
+Due to godot engine VR rendering engine limitations, transparent materials are draws after opaque materials, and are sorted back-to-front before being drawn based on the Node3D position.
+Due to this, overlapping objects may often be sorted out of order, and may have a not intended visual afterimage effect.
+The only way to solve this issue is to reprogram the entire godot rendering engine or avoid using transparent objects entirely.
+https://docs.godotengine.org/en/stable/tutorials/3d/3d_rendering_limitations.html#transparency-sorting
+
+Some imported 3d models do not render at all in VR, while looking fine in the editor. Unsure how to fix the issue, so just had to look for different models that worked.
+
+Fire particle textures are not rendering for some reason, leaving the particles looking like basic squares.
+
+Brazier GUI should also display images, though unsure what the problem currently is.
+
+Timer doesn't display correct time. Need more tests, maybe the math is wrong somehow, or I don't understand how it works.
+
+Door models are not lit properly.
+
+Controller models are jank af and the texture's borked. Temporary fix by making them pure black to hide everything until i get more appropriate models.
+
+The scanner item scans bones that are not picked up. This is due to the bones having a collision layer/mask set to 0 while picked up.
+
+The bone only snaps into place if it ir released (i.e., returns to collision layer 1). If the bones were made to not change to CL0 when picked up, they would snap into place right out of the hand, which is an issue in and of itself - since 'snapping' is just a collision area checking if the right object entered, then deleting it and turning its child model visible. With the current system, if the bone is deleted out of the hand before it is released, the hand still thinks it is holding something and will not be able to pick up anything else.
+
+Sometimes the sprite3d loses track of the viewport target and doesn't show anything. Current fix is just to make the object with the sprite3d node a local to the scene and remake the viewport elements by hand.
+
+Couldn't make the scanner light scale with the distance from the scanner to the scanned object, so it's left as a constant for now.
+
+Still can't make a javascript shell for scorm api - this is out of my league. Since there are no step-by-step tutorials, the only option is to learn everything inside-out for something that should only take 10 minutes to set up and forget about.
+

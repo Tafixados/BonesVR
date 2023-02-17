@@ -1,0 +1,261 @@
+[gd_scene load_steps=31 format=2]
+
+[ext_resource path="res://Elements/Bones/Left_foot.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Elements/Bones/Left_tibia.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Elements/Bones/Right_scapula.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Elements/Bones/Spine.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Elements/Bones/Pelvis.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Elements/Bones/Right_femur.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Elements/Bones/Right_ribs.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Elements/Bones/Left_hand.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Elements/Bones/Right_ulna.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Elements/Bones/Right_patella.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Elements/Bones/Mandible.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Elements/Bones/Left_humerus.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Elements/Bones/Right_hand.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Elements/Bones/Sternum.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Elements/Bones/Right_humerus.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Elements/Bones/Left_radius.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Elements/Bones/Left_femur.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Elements/Bones/Left_ribs.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Elements/Bones/Left_ulna.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Elements/Bones/Right_clavicle.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Elements/Bones/Right_fibula.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Elements/Bones/Right_tibia.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Elements/Bones/Left_clavicle.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Elements/Bones/Right_foot.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Elements/Bones/Skull.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Elements/Bones/Left_patella.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Elements/Silhouette/Silhouette.tscn" type="PackedScene" id=28]
+[ext_resource path="res://Elements/Bones/Left_scapula.tscn" type="PackedScene" id=29]
+[ext_resource path="res://Elements/Bones/Right_radius.tscn" type="PackedScene" id=30]
+[ext_resource path="res://Elements/Bones/Left_fibula.tscn" type="PackedScene" id=31]
+
+[node name="Collection" type="Spatial"]
+
+[node name="Bones" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.39462, 0.183542 )
+
+[node name="Skull" parent="Bones" instance=ExtResource( 26 )]
+id = 1
+title = "Kaukolė, galvos griaučiai (lot. cranium)"
+description = "Keletas tarpusavyje suaugusių kaulų, sudarančių ašinio skeleto viršutinę dalį. "
+image = "res://assets/cranium_mandible.png"
+
+[node name="Mandible" parent="Bones" instance=ExtResource( 12 )]
+id = 2
+title = "Apatinis žandikaulis (lot. mandibula)."
+description = "Stambus, neporinis, neorinis kaulas."
+image = "res://assets/cranium_mandible.png"
+
+[node name="Spine" parent="Bones" instance=ExtResource( 5 )]
+id = 3
+title = "Stuburas (angl. spine)"
+description = "Atraminė ašis, sudaryta iš 33 - 34 slankstelių."
+image = "res://assets/spine.png"
+
+[node name="Pelvis" parent="Bones" instance=ExtResource( 6 )]
+id = 4
+title = "Kaulinis dubuo (angl. pelvis)"
+description = "Kaulas, esantis stuburo atramos taške. Dubuo jungia dalį gūžduobių."
+image = "res://assets/pelvis.png"
+
+[node name="Sternum" parent="Bones" instance=ExtResource( 15 )]
+id = 5
+title = "Krūtinkaulis (lot. sternum)"
+description = "Plokščiasis kaulas, esantis krūtinės ląstos priekinėje sienoje. Šis kaulas yra siaurėjantis į apačią ir tradiciškai aprašomas kaip kardas."
+image = "res://assets/ribs_sternum.png"
+
+[node name="Right_ribs" parent="Bones" instance=ExtResource( 8 )]
+id = 6
+title = "Dešinieji šonkauliai (angl. ribs, lot. costae)"
+description = "Krūtinės ląstos kaulai. Yra 12 porų (arba 24 kaulai). Šonkauliai su krūtinės slanksteliais sudaro sąnarius. Raumenų pakeliami, jie padidina krūtinės tūrį ir padeda įkvėpti, ir priešingai, – kiti raumenys šonkaulius nuleidžia ir padeda iškvėpti."
+image = "res://assets/ribs_sternum.png"
+
+[node name="Left_ribs" parent="Bones" instance=ExtResource( 19 )]
+id = 7
+title = "Kairieji šonkauliai (angl. ribs, lot. costae)"
+description = "Krūtinės ląstos kaulai. Yra 12 porų (arba 24 kaulai). Šonkauliai su krūtinės slanksteliais sudaro sąnarius. Raumenų pakeliami, jie padidina krūtinės tūrį ir padeda įkvėpti, ir priešingai, – kiti raumenys šonkaulius nuleidžia ir padeda iškvėpti."
+image = "res://assets/ribs_sternum.png"
+
+[node name="Right_clavicle" parent="Bones" instance=ExtResource( 21 )]
+id = 8
+title = "Dešinysis raktikaulis (lot. clavicula)"
+description = "Ilgasis, ištemptos S raidės pavidalo kaulas. Kaulas lengvai apčiuopiamas beveik per visą jo ilgį tarp minkštųjų audinių ties kaklo ir krūtinės riba."
+image = "res://assets/clavicle.png"
+
+[node name="Left_clavicle" parent="Bones" instance=ExtResource( 24 )]
+id = 9
+title = "Kairysis raktikaulis (lot. clavicula)"
+description = "Ilgasis, ištemptos S raidės pavidalo kaulas. Kaulas lengvai apčiuopiamas beveik per visą jo ilgį tarp minkštųjų audinių ties kaklo ir krūtinės riba."
+image = "res://assets/clavicle.png"
+
+[node name="Right_scapula" parent="Bones" instance=ExtResource( 4 )]
+id = 10
+title = "Dešinioji mentė (lot. scapula)"
+description = "Pečių lanko porinis plokščias kaulas, esantis užpakalinėje pečių lanko pusėje."
+image = "res://assets/scapula.png"
+
+[node name="Left_scapula" parent="Bones" instance=ExtResource( 29 )]
+id = 11
+title = "Kairioji mentė (lot. scapula)"
+description = "Pečių lanko porinis plokščias kaulas, esantis užpakalinėje pečių lanko pusėje."
+image = "res://assets/scapula.png"
+
+[node name="Right_humerus" parent="Bones" instance=ExtResource( 16 )]
+id = 12
+title = "Dešinysis žastikaulis (lot. humerus)"
+description = "Ilgasis rankų kaulas, pridėtinio skeleto dalis. Vienintelis žasto kaulas."
+image = "res://assets/humerus.png"
+
+[node name="Left_humerus" parent="Bones" instance=ExtResource( 13 )]
+id = 13
+title = "Kairysis žastikaulis (lot. humerus)"
+description = "Ilgasis rankų kaulas, pridėtinio skeleto dalis. Vienintelis žasto kaulas."
+image = "res://assets/humerus.png"
+
+[node name="Right_ulna" parent="Bones" instance=ExtResource( 10 )]
+id = 14
+title = "Dešinysis alkūnkaulis (lot. ulna)"
+description = "Vienas iš dviejų dilbio kaulų. Priglaudus delnus prie šlaunų, dilbio kaulai būna susikryžiavę, o atsukus delnus į priekį, jie išsidėsto lygiagrečiai. Tada alkūnkaulis yra vidinėje dilbio pusėje."
+image = "res://assets/radius_ulna.png"
+
+[node name="Left_ulna" parent="Bones" instance=ExtResource( 20 )]
+id = 15
+title = "Kairysis alkūnkaulis (lot. ulna)"
+description = "Vienas iš dviejų dilbio kaulų. Priglaudus delnus prie šlaunų, dilbio kaulai būna susikryžiavę, o atsukus delnus į priekį, jie išsidėsto lygiagrečiai. Tada alkūnkaulis yra vidinėje dilbio pusėje."
+image = "res://assets/radius_ulna.png"
+
+[node name="Right_radius" parent="Bones" instance=ExtResource( 30 )]
+id = 16
+title = "Dešinysis stipinkaulis (lot. radius)"
+description = "Kai delnas atgręžtas į priekį, šis dilbio kaulas guli šoninėje pusėje. Jis priklauso ilgųjų kaulų rūšiai."
+image = "res://assets/radius_ulna.png"
+
+[node name="Left_radius" parent="Bones" instance=ExtResource( 17 )]
+id = 17
+title = "Kairysis stipinkaulis (lot. radius)"
+description = "Kai delnas atgręžtas į priekį, šis dilbio kaulas guli šoninėje pusėje. Jis priklauso ilgųjų kaulų rūšiai."
+image = "res://assets/radius_ulna.png"
+
+[node name="Right_hand" parent="Bones" instance=ExtResource( 14 )]
+id = 18
+title = "Dešiniosios plaštakos griaučiai (angl. carpal bones)"
+description = "Plaštakos griaučius sudaro 27 kaulai. Jie skirstomi į riešakaulius (ossa carpi), delnakaulius (ossa metacarpi) ir pirštakaulius (ossa digitorum)."
+image = "res://assets/carpal.png"
+
+[node name="Left_hand" parent="Bones" instance=ExtResource( 9 )]
+id = 19
+title = "Kairiosios plaštakos griaučiai (angl. carpal bones)"
+description = "Plaštakos griaučius sudaro 27 kaulai. Jie skirstomi į riešakaulius (ossa carpi), delnakaulius (ossa metacarpi) ir pirštakaulius (ossa digitorum)."
+image = "res://assets/carpal.png"
+
+[node name="Right_femur" parent="Bones" instance=ExtResource( 7 )]
+id = 20
+title = "Dešinysis šlaunikaulis (lot. femur)"
+description = "Šlaunikaulis yra didžiausias iš ilgųjų kaulų.  Tai vienintelis šlaunies kaulas. Viršutinis galas, arba galva, įsitvirtina į gūžduobę; apatinis galas baigiasi krumpliais, kurie yra kelio sąnario dalys. Prie jo priglunda girnelė, raiščiu sujungta su blauzdikauliu."
+image = "res://assets/femur.png"
+
+[node name="Left_femur" parent="Bones" instance=ExtResource( 18 )]
+id = 21
+title = "Kairysis šlaunikaulis (lot. femur)"
+description = "Šlaunikaulis yra didžiausias iš ilgųjų kaulų.  Tai vienintelis šlaunies kaulas. Viršutinis galas, arba galva, įsitvirtina į gūžduobę; apatinis galas baigiasi krumpliais, kurie yra kelio sąnario dalys. Prie jo priglunda girnelė, raiščiu sujungta su blauzdikauliu."
+image = "res://assets/femur.png"
+
+[node name="Right_patella" parent="Bones" instance=ExtResource( 11 )]
+id = 22
+title = "Dešinioji girnelė (lot. patella)"
+description = "Tvirta kaulinė plokštelė, raiščiu sujungta su blauzdikauliu."
+image = "res://assets/patella.png"
+
+[node name="Left_patella" parent="Bones" instance=ExtResource( 27 )]
+id = 23
+title = "Kairioji girnelė (lot. patella)"
+description = "Tvirta kaulinė plokštelė, raiščiu sujungta su blauzdikauliu."
+image = "res://assets/patella.png"
+
+[node name="Right_tibia" parent="Bones" instance=ExtResource( 23 )]
+id = 24
+title = "Dešinysis blauzdikaulis (lot. tibia)"
+description = "Tai stipresnis blauzdos kaulas."
+image = "res://assets/tibia_fibula.png"
+
+[node name="Left_tibia" parent="Bones" instance=ExtResource( 3 )]
+id = 25
+title = "Kairysis blauzdikaulis (lot. tibia)"
+description = "Tai stipresnis blauzdos kaulas."
+image = "res://assets/tibia_fibula.png"
+
+[node name="Right_fibula" parent="Bones" instance=ExtResource( 22 )]
+id = 26
+title = "Dešinysis šeivikaulis (lot. fibula)"
+description = "Antras blauzdos kaulas, gulintis į šoną ir šiek tiek atgal nuo blauzdikaulio. Tai laibas ilgasis kaulas."
+image = "res://assets/tibia_fibula.png"
+
+[node name="Left_fibula" parent="Bones" instance=ExtResource( 31 )]
+id = 27
+title = "Kairysis šeivikaulis (lot. fibula)"
+description = "Antras blauzdos kaulas, gulintis į šoną ir šiek tiek atgal nuo blauzdikaulio. Tai laibas ilgasis kaulas."
+image = "res://assets/tibia_fibula.png"
+
+[node name="Right_foot" parent="Bones" instance=ExtResource( 25 )]
+id = 28
+title = "Dešiniosios pėdos griaučiai (lot. ossa pedis)"
+description = "Sudaryta iš keturiolikos pirštakaulių (ossa digitorum pedis), penkių padikaulių (ossa metatarsi) ir septynių čiurnos kaulų (ossa tarsi)"
+image = "res://assets/pedis.png"
+
+[node name="Left_foot" parent="Bones" instance=ExtResource( 2 )]
+id = 29
+title = "Kairiosios pėdos griaučiai (lot. ossa pedis)"
+description = "Sudaryta iš keturiolikos pirštakaulių (ossa digitorum pedis), penkių padikaulių (ossa metatarsi) ir septynių čiurnos kaulų (ossa tarsi)"
+image = "res://assets/pedis.png"
+
+[node name="Silhouette" parent="." instance=ExtResource( 28 )]
+transform = Transform( 0.85, 0, 0, 0, 0.85, 0, 0, 0, 0.85, 0, 0, -0.895187 )
+
+[node name="CollisionShape" parent="Silhouette/Collisions/Left_humerus" index="0"]
+transform = Transform( 0.66678, -0.745255, 0, 0.745255, 0.66678, 0, 0, 0, 1, 0.0195186, -0.0744764, 0.0118507 )
+
+[node name="CollisionShape" parent="Silhouette/Collisions/Left_ulna" index="0"]
+transform = Transform( 0.524562, -0.712866, -0.465464, 0.814603, 0.579191, 0.0309895, 0.247501, -0.395424, 0.884524, 0.0219805, -0.0116134, -0.0185069 )
+
+[node name="CollisionShape" parent="Silhouette/Collisions/Left_femur" index="0"]
+transform = Transform( 0.987339, -0.158623, 0, 0.158198, 0.98469, 0.0732034, -0.0116118, -0.0722766, 0.997317, -0.00990111, -0.0126827, -0.0218817 )
+
+[node name="CollisionShape" parent="Silhouette/Collisions/Right_humerus" index="0"]
+transform = Transform( 0.730996, 0.682381, 0, -0.682381, 0.730996, 0, 0, 0, 1, -0.0398035, -0.0591612, -0.0094806 )
+
+[node name="CollisionShape" parent="Silhouette/Collisions/Right_tibia" index="0"]
+transform = Transform( 0.986233, 0.165207, 0.00721192, -0.161231, 0.970357, -0.180031, -0.0367406, 0.17639, 0.983634, 0.0559331, 0, -0.0639832 )
+
+[connection signal="bone_entered" from="Silhouette/Collisions/Skull" to="Bones/Skull" method="_on_Skull_bone_entered"]
+[connection signal="bone_entered" from="Silhouette/Collisions/Mandible" to="Bones/Mandible" method="_on_Mandible_bone_entered"]
+[connection signal="bone_entered" from="Silhouette/Collisions/Pelvis" to="Bones/Pelvis" method="_on_Pelvis_bone_entered"]
+[connection signal="bone_entered" from="Silhouette/Collisions/Spine" to="Bones/Spine" method="_on_Spine_bone_entered"]
+[connection signal="bone_entered" from="Silhouette/Collisions/Right_femur" to="Bones/Right_femur" method="_on_Right_femur_bone_entered"]
+[connection signal="bone_entered" from="Silhouette/Collisions/Right_ribs" to="Bones/Right_ribs" method="_on_Right_ribs_bone_entered"]
+[connection signal="bone_entered" from="Silhouette/Collisions/Sternum" to="Bones/Sternum" method="_on_Sternum_bone_entered"]
+[connection signal="bone_entered" from="Silhouette/Collisions/Left_ribs" to="Bones/Left_ribs" method="_on_Left_ribs_bone_entered"]
+[connection signal="bone_entered" from="Silhouette/Collisions/Left_scapula" to="Bones/Left_scapula" method="_on_Left_scapula_bone_entered"]
+[connection signal="bone_entered" from="Silhouette/Collisions/Left_humerus" to="Bones/Left_humerus" method="_on_Left_humerus_bone_entered"]
+[connection signal="bone_entered" from="Silhouette/Collisions/Left_radius" to="Bones/Left_radius" method="_on_Left_radius_bone_entered"]
+[connection signal="bone_entered" from="Silhouette/Collisions/Left_ulna" to="Bones/Left_ulna" method="_on_Left_ulna_bone_entered"]
+[connection signal="bone_entered" from="Silhouette/Collisions/Left_hand" to="Bones/Left_hand" method="_on_Left_hand_bone_entered"]
+[connection signal="bone_entered" from="Silhouette/Collisions/Left_clavicle" to="Bones/Left_clavicle" method="_on_Left_clavicle_bone_entered"]
+[connection signal="bone_entered" from="Silhouette/Collisions/Left_femur" to="Bones/Left_femur" method="_on_Left_femur_bone_entered"]
+[connection signal="bone_entered" from="Silhouette/Collisions/Left_fibula" to="Bones/Left_fibula" method="_on_Left_fibula_bone_entered"]
+[connection signal="bone_entered" from="Silhouette/Collisions/Left_tibia" to="Bones/Left_tibia" method="_on_Left_tibia_bone_entered"]
+[connection signal="bone_entered" from="Silhouette/Collisions/Left_foot" to="Bones/Left_foot" method="_on_Left_foot_bone_entered"]
+[connection signal="bone_entered" from="Silhouette/Collisions/Left_patella" to="Bones/Left_patella" method="_on_Left_patella_bone_entered"]
+[connection signal="bone_entered" from="Silhouette/Collisions/Right_clavicle" to="Bones/Right_clavicle" method="_on_Right_clavicle_bone_entered"]
+[connection signal="bone_entered" from="Silhouette/Collisions/Right_scapula" to="Bones/Right_scapula" method="_on_Right_scapula_bone_entered"]
+[connection signal="bone_entered" from="Silhouette/Collisions/Right_hand" to="Bones/Right_hand" method="_on_Right_hand_bone_entered"]
+[connection signal="bone_entered" from="Silhouette/Collisions/Right_humerus" to="Bones/Right_humerus" method="_on_Right_humerus_bone_entered"]
+[connection signal="bone_entered" from="Silhouette/Collisions/Right_ulna" to="Bones/Right_ulna" method="_on_Right_ulna_bone_entered"]
+[connection signal="bone_entered" from="Silhouette/Collisions/Right_radius" to="Bones/Right_radius" method="_on_Right_radius_bone_entered"]
+[connection signal="bone_entered" from="Silhouette/Collisions/Right_tibia" to="Bones/Right_tibia" method="_on_Right_tibia_bone_entered"]
+[connection signal="bone_entered" from="Silhouette/Collisions/Right_fibula" to="Bones/Right_fibula" method="_on_Right_fibula_bone_entered"]
+[connection signal="bone_entered" from="Silhouette/Collisions/Right_foot" to="Bones/Right_foot" method="_on_Right_foot_bone_entered"]
+[connection signal="bone_entered" from="Silhouette/Collisions/Right_patella" to="Bones/Right_patella" method="_on_Right_patella_bone_entered"]
+
+[editable path="Silhouette"]

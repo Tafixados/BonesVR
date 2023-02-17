@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest identifier="MpVXfFaSG8z3h" xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:lom="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+<metadata>
+<schema>ADL SCORM</schema>
+<schemaversion>1.2</schemaversion>
+<lom:lom>
+<lom:general>
+<lom:title>
+<lom:langstring>bones_vr_scorm12</lom:langstring>
+</lom:title>
+</lom:general>
+<lom:educational>
+<lom:typicallearningtime>
+<lom:datetime>01:00:00</lom:datetime>
+</lom:typicallearningtime>
+</lom:educational>
+</lom:lom>
+</metadata>
+<organizations default="Tafixados">
+<organization identifier="Tafixados">
+<title>bones_vr_scorm12</title>
+<item identifier="A2E28744-6911-4B3A-9A07-B7E3CD24800F" identifierref="resource">
+<title>bones vr</title>
+</item>
+</organization>
+</organizations>
+<resources>
+<resource identifier="resource" type="webcontent" adlcp:scormtype="sco" href="index.html">
+
+<file href="adlcp_rootv1p2.xsd"/>
+<file href="imscp_rootv1p1p2.xsd"/>
+<file href="imsmanifest.xml"/>
+<file href="imsmd_rootv1p2p1.xsd"/>
+<file href="ims_xml.xsd"/>
+<file href="index.apple-touch-icon.png"/>
+<file href="index.apple-touch-icon.png.import"/>
+<file href="index.audio.worklet.js"/>
+<file href="index.html"/>
+<file href="index.icon.png"/>
+<file href="index.icon.png.import"/>
+
+<file href="index.js"/>
+<file href="index.pck"/>
+<file href="index.png"/>
+<file href="index.png.import"/>
+<file href="index.wasm"/>
+<file href="scormjs/SCOFunctions.js"/>
+<file href="scormjs/SCORM_API_wrapper.js"/>
+
+</resource>
+</resources>
+</manifest>

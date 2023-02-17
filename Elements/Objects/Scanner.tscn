@@ -1,0 +1,80 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://model imports/controllers/scanner_wide.glb" type="PackedScene" id=1]
+[ext_resource path="res://Fonts/SilverCharmDuo.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://Elements/Objects/Scanner.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=2]
+size = 69
+font_data = ExtResource( 2 )
+
+[sub_resource type="ViewportTexture" id=1]
+viewport_path = NodePath("Viewport")
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.050264, 0.0633852, 0.106723 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 0.0173534, 0.0799745, 0.0293513 )
+
+[sub_resource type="Gradient" id=6]
+colors = PoolColorArray( 0.0078125, 0, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture" id=7]
+gradient = SubResource( 6 )
+width = 30
+
+[sub_resource type="BoxShape" id=8]
+extents = Vector3( 0.0943159, 0.0692685, 0.0197777 )
+
+[node name="Scanner" type="RigidBody"]
+script = ExtResource( 3 )
+
+[node name="scanner_wide" parent="." instance=ExtResource( 1 )]
+transform = Transform( -2.62268e-07, 0, 6, 0, 6, 0, -6, 0, -2.62268e-07, 0.023, -0.013, 0.008 )
+
+[node name="Viewport" type="Viewport" parent="."]
+size = Vector2( 400, 310 )
+render_target_v_flip = true
+render_target_update_mode = 3
+
+[node name="Label" type="Label" parent="Viewport"]
+margin_left = 30.0
+margin_top = 10.0
+margin_right = 370.0
+margin_bottom = 300.0
+custom_colors/font_color = Color( 0, 1, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+align = 1
+valign = 1
+autowrap = true
+
+[node name="PanelSprite" type="Sprite3D" parent="."]
+transform = Transform( -0.0395639, -1.27796e-09, -5.75623e-09, 3.08549e-10, 0.0381218, -0.0105843, 5.88832e-09, -0.0105843, -0.0381218, -0.00617766, 0.11482, 0.0394808 )
+flip_h = true
+texture = SubResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.00654346, 0.112212, -0.0823501 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="."]
+transform = Transform( -1, -1.77208e-08, -8.56079e-08, 0, 0.97924, -0.202702, 8.74228e-08, -0.202702, -0.97924, 0.00163446, -0.00669749, -0.00201678 )
+shape = SubResource( 4 )
+
+[node name="RayCast" type="RayCast" parent="."]
+transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0.00169535, 0.0957285, -0.172284 )
+enabled = true
+cast_to = Vector3( 0, 0, 2 )
+collision_mask = 3
+
+[node name="RaycastSprite" type="Sprite3D" parent="RayCast"]
+transform = Transform( -1.31134e-09, 0, -0.03, 0, 0.03, 0, 0.03, 0, -1.31134e-09, 1.97906e-09, -0.0309309, -0.0307303 )
+visible = false
+centered = false
+pixel_size = 2.0
+texture = SubResource( 7 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, -0.00318015, 0.117182, 0.0336231 )
+shape = SubResource( 8 )
