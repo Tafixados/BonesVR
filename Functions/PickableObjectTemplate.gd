@@ -63,6 +63,12 @@ func _ready():
 	original_collision_mask = collision_mask
 	original_collision_layer = collision_layer
 	original_global_position = global_transform.origin
+	if Singleton.language == "LT":
+		title = "Kaulas"
+		description = "Paskirtis"
+	else:
+		title = "Bone"
+		description = "Purpose"			
 	set_timer()
 
 func set_timer():

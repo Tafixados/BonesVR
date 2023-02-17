@@ -6,6 +6,7 @@ var scoreboard
 var time = 0.0
 var mistakes = 0
 var brazier_uses = 0
+var language = "LT"
 
 func bone_placed():
 	if bones_placed == 1:

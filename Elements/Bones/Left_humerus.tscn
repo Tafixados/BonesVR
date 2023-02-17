@@ -4,8 +4,8 @@
 [ext_resource path="res://Functions/PickableObjectTemplate.gd" type="Script" id=2]
 
 [sub_resource type="CylinderShape" id=15]
-radius = 0.0181904
 height = 0.323348
+radius = 0.0181904
 
 [node name="Left_humerus" type="RigidBody"]
 script = ExtResource( 2 )
