@@ -6,6 +6,8 @@ var vr_supported = false
 func _ready() -> void:
 	$Sprite.scale.x = OS.get_window_size().x * 0.000533
 	$Sprite.scale.y = OS.get_window_size().y * 0.0008
+	$Button.rect_scale(Vector2(OS.get_window_size().x * 0.000533, OS.get_window_size().y * 0.0008))	# not working
+	$Button.rect_position(Vector2(1000, 500)) # not working
 	$Button.connect("pressed", self, "_on_Button_pressed")
  
 	webxr_interface = ARVRServer.find_interface("WebXR")
