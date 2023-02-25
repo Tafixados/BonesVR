@@ -12,7 +12,8 @@ var picked_up_by = null
 
 #Description for brazier
 export var id = 0
-export var title = "Kaulas"
+export var bone_name = "Kaulas"
+export var title = "Kaulas (lot. ossa)"
 export var description = "Paskirtis"
 export var image = ""
 
@@ -63,13 +64,8 @@ func _ready():
 	original_collision_mask = collision_mask
 	original_collision_layer = collision_layer
 	original_global_position = global_transform.origin
-	if Singleton.language == "LT":
-		title = "Kaulas"
-		description = "Paskirtis"
-	else:
-		title = "Bone"
-		description = "Purpose"			
 	set_timer()
+	Singleton.MistakesArray[id-1][0] = bone_name
 
 func set_timer():
 	timer = Timer.new()

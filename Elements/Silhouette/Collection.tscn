@@ -38,174 +38,203 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.39462, 0.183542 )
 
 [node name="Skull" parent="Bones" instance=ExtResource( 26 )]
 id = 1
+bone_name = "Kaukolė"
 title = "Kaukolė, galvos griaučiai (lot. cranium)"
 description = "Keletas tarpusavyje suaugusių kaulų, sudarančių ašinio skeleto viršutinę dalį. "
 image = "res://assets/cranium_mandible.png"
 
 [node name="Mandible" parent="Bones" instance=ExtResource( 12 )]
 id = 2
+bone_name = "A. žandikaulis"
 title = "Apatinis žandikaulis (lot. mandibula)."
 description = "Stambus, neporinis, neorinis kaulas."
 image = "res://assets/cranium_mandible.png"
 
 [node name="Spine" parent="Bones" instance=ExtResource( 5 )]
 id = 3
+bone_name = "Stuburas"
 title = "Stuburas (angl. spine)"
 description = "Atraminė ašis, sudaryta iš 33 - 34 slankstelių."
 image = "res://assets/spine.png"
 
 [node name="Pelvis" parent="Bones" instance=ExtResource( 6 )]
 id = 4
+bone_name = "Dubuo"
 title = "Kaulinis dubuo (angl. pelvis)"
 description = "Kaulas, esantis stuburo atramos taške. Dubuo jungia dalį gūžduobių."
 image = "res://assets/pelvis.png"
 
 [node name="Sternum" parent="Bones" instance=ExtResource( 15 )]
 id = 5
+bone_name = "Krūtinkaulis"
 title = "Krūtinkaulis (lot. sternum)"
 description = "Plokščiasis kaulas, esantis krūtinės ląstos priekinėje sienoje. Šis kaulas yra siaurėjantis į apačią ir tradiciškai aprašomas kaip kardas."
 image = "res://assets/ribs_sternum.png"
 
 [node name="Right_ribs" parent="Bones" instance=ExtResource( 8 )]
 id = 6
+bone_name = "D. šonkauliai"
 title = "Dešinieji šonkauliai (angl. ribs, lot. costae)"
 description = "Krūtinės ląstos kaulai. Yra 12 porų (arba 24 kaulai). Šonkauliai su krūtinės slanksteliais sudaro sąnarius. Raumenų pakeliami, jie padidina krūtinės tūrį ir padeda įkvėpti, ir priešingai, – kiti raumenys šonkaulius nuleidžia ir padeda iškvėpti."
 image = "res://assets/ribs_sternum.png"
 
 [node name="Left_ribs" parent="Bones" instance=ExtResource( 19 )]
 id = 7
+bone_name = "K. šonkauliai"
 title = "Kairieji šonkauliai (angl. ribs, lot. costae)"
 description = "Krūtinės ląstos kaulai. Yra 12 porų (arba 24 kaulai). Šonkauliai su krūtinės slanksteliais sudaro sąnarius. Raumenų pakeliami, jie padidina krūtinės tūrį ir padeda įkvėpti, ir priešingai, – kiti raumenys šonkaulius nuleidžia ir padeda iškvėpti."
 image = "res://assets/ribs_sternum.png"
 
 [node name="Right_clavicle" parent="Bones" instance=ExtResource( 21 )]
 id = 8
+bone_name = "D. raktikaulis"
 title = "Dešinysis raktikaulis (lot. clavicula)"
 description = "Ilgasis, ištemptos S raidės pavidalo kaulas. Kaulas lengvai apčiuopiamas beveik per visą jo ilgį tarp minkštųjų audinių ties kaklo ir krūtinės riba."
 image = "res://assets/clavicle.png"
 
 [node name="Left_clavicle" parent="Bones" instance=ExtResource( 24 )]
 id = 9
+bone_name = "K. raktikaulis"
 title = "Kairysis raktikaulis (lot. clavicula)"
 description = "Ilgasis, ištemptos S raidės pavidalo kaulas. Kaulas lengvai apčiuopiamas beveik per visą jo ilgį tarp minkštųjų audinių ties kaklo ir krūtinės riba."
 image = "res://assets/clavicle.png"
 
 [node name="Right_scapula" parent="Bones" instance=ExtResource( 4 )]
 id = 10
+bone_name = "D. mentė"
 title = "Dešinioji mentė (lot. scapula)"
 description = "Pečių lanko porinis plokščias kaulas, esantis užpakalinėje pečių lanko pusėje."
 image = "res://assets/scapula.png"
 
 [node name="Left_scapula" parent="Bones" instance=ExtResource( 29 )]
 id = 11
+bone_name = "K. mentė"
 title = "Kairioji mentė (lot. scapula)"
 description = "Pečių lanko porinis plokščias kaulas, esantis užpakalinėje pečių lanko pusėje."
 image = "res://assets/scapula.png"
 
 [node name="Right_humerus" parent="Bones" instance=ExtResource( 16 )]
 id = 12
+bone_name = "D. žąstikaulis"
 title = "Dešinysis žastikaulis (lot. humerus)"
 description = "Ilgasis rankų kaulas, pridėtinio skeleto dalis. Vienintelis žasto kaulas."
 image = "res://assets/humerus.png"
 
 [node name="Left_humerus" parent="Bones" instance=ExtResource( 13 )]
 id = 13
+bone_name = "K. žąstikaulis"
 title = "Kairysis žastikaulis (lot. humerus)"
 description = "Ilgasis rankų kaulas, pridėtinio skeleto dalis. Vienintelis žasto kaulas."
 image = "res://assets/humerus.png"
 
 [node name="Right_ulna" parent="Bones" instance=ExtResource( 10 )]
 id = 14
+bone_name = "D. alkūnkaulis"
 title = "Dešinysis alkūnkaulis (lot. ulna)"
 description = "Vienas iš dviejų dilbio kaulų. Priglaudus delnus prie šlaunų, dilbio kaulai būna susikryžiavę, o atsukus delnus į priekį, jie išsidėsto lygiagrečiai. Tada alkūnkaulis yra vidinėje dilbio pusėje."
 image = "res://assets/radius_ulna.png"
 
 [node name="Left_ulna" parent="Bones" instance=ExtResource( 20 )]
 id = 15
+bone_name = "K. alkūnkaulis"
 title = "Kairysis alkūnkaulis (lot. ulna)"
 description = "Vienas iš dviejų dilbio kaulų. Priglaudus delnus prie šlaunų, dilbio kaulai būna susikryžiavę, o atsukus delnus į priekį, jie išsidėsto lygiagrečiai. Tada alkūnkaulis yra vidinėje dilbio pusėje."
 image = "res://assets/radius_ulna.png"
 
 [node name="Right_radius" parent="Bones" instance=ExtResource( 30 )]
 id = 16
+bone_name = "D. stipinkaulis"
 title = "Dešinysis stipinkaulis (lot. radius)"
 description = "Kai delnas atgręžtas į priekį, šis dilbio kaulas guli šoninėje pusėje. Jis priklauso ilgųjų kaulų rūšiai."
 image = "res://assets/radius_ulna.png"
 
 [node name="Left_radius" parent="Bones" instance=ExtResource( 17 )]
 id = 17
+bone_name = "K. stipinkaulis"
 title = "Kairysis stipinkaulis (lot. radius)"
 description = "Kai delnas atgręžtas į priekį, šis dilbio kaulas guli šoninėje pusėje. Jis priklauso ilgųjų kaulų rūšiai."
 image = "res://assets/radius_ulna.png"
 
 [node name="Right_hand" parent="Bones" instance=ExtResource( 14 )]
 id = 18
+bone_name = "D. plaštaka"
 title = "Dešiniosios plaštakos griaučiai (angl. carpal bones)"
 description = "Plaštakos griaučius sudaro 27 kaulai. Jie skirstomi į riešakaulius (ossa carpi), delnakaulius (ossa metacarpi) ir pirštakaulius (ossa digitorum)."
 image = "res://assets/carpal.png"
 
 [node name="Left_hand" parent="Bones" instance=ExtResource( 9 )]
 id = 19
+bone_name = "K. plaštaka"
 title = "Kairiosios plaštakos griaučiai (angl. carpal bones)"
 description = "Plaštakos griaučius sudaro 27 kaulai. Jie skirstomi į riešakaulius (ossa carpi), delnakaulius (ossa metacarpi) ir pirštakaulius (ossa digitorum)."
 image = "res://assets/carpal.png"
 
 [node name="Right_femur" parent="Bones" instance=ExtResource( 7 )]
 id = 20
+bone_name = "D. šlaunikaulis"
 title = "Dešinysis šlaunikaulis (lot. femur)"
 description = "Šlaunikaulis yra didžiausias iš ilgųjų kaulų.  Tai vienintelis šlaunies kaulas. Viršutinis galas, arba galva, įsitvirtina į gūžduobę; apatinis galas baigiasi krumpliais, kurie yra kelio sąnario dalys. Prie jo priglunda girnelė, raiščiu sujungta su blauzdikauliu."
 image = "res://assets/femur.png"
 
 [node name="Left_femur" parent="Bones" instance=ExtResource( 18 )]
 id = 21
+bone_name = "K. šlaunikaulis"
 title = "Kairysis šlaunikaulis (lot. femur)"
 description = "Šlaunikaulis yra didžiausias iš ilgųjų kaulų.  Tai vienintelis šlaunies kaulas. Viršutinis galas, arba galva, įsitvirtina į gūžduobę; apatinis galas baigiasi krumpliais, kurie yra kelio sąnario dalys. Prie jo priglunda girnelė, raiščiu sujungta su blauzdikauliu."
 image = "res://assets/femur.png"
 
 [node name="Right_patella" parent="Bones" instance=ExtResource( 11 )]
 id = 22
+bone_name = "D. girnelė"
 title = "Dešinioji girnelė (lot. patella)"
 description = "Tvirta kaulinė plokštelė, raiščiu sujungta su blauzdikauliu."
 image = "res://assets/patella.png"
 
 [node name="Left_patella" parent="Bones" instance=ExtResource( 27 )]
 id = 23
+bone_name = "K. girnelė"
 title = "Kairioji girnelė (lot. patella)"
 description = "Tvirta kaulinė plokštelė, raiščiu sujungta su blauzdikauliu."
 image = "res://assets/patella.png"
 
 [node name="Right_tibia" parent="Bones" instance=ExtResource( 23 )]
 id = 24
+bone_name = "D. blauzdikaulis"
 title = "Dešinysis blauzdikaulis (lot. tibia)"
 description = "Tai stipresnis blauzdos kaulas."
 image = "res://assets/tibia_fibula.png"
 
 [node name="Left_tibia" parent="Bones" instance=ExtResource( 3 )]
 id = 25
+bone_name = "K. blauzdikaulis"
 title = "Kairysis blauzdikaulis (lot. tibia)"
 description = "Tai stipresnis blauzdos kaulas."
 image = "res://assets/tibia_fibula.png"
 
 [node name="Right_fibula" parent="Bones" instance=ExtResource( 22 )]
 id = 26
+bone_name = "D. šeivikaulis"
 title = "Dešinysis šeivikaulis (lot. fibula)"
 description = "Antras blauzdos kaulas, gulintis į šoną ir šiek tiek atgal nuo blauzdikaulio. Tai laibas ilgasis kaulas."
 image = "res://assets/tibia_fibula.png"
 
 [node name="Left_fibula" parent="Bones" instance=ExtResource( 31 )]
 id = 27
+bone_name = "K. šeivikaulis"
 title = "Kairysis šeivikaulis (lot. fibula)"
 description = "Antras blauzdos kaulas, gulintis į šoną ir šiek tiek atgal nuo blauzdikaulio. Tai laibas ilgasis kaulas."
 image = "res://assets/tibia_fibula.png"
 
 [node name="Right_foot" parent="Bones" instance=ExtResource( 25 )]
 id = 28
+bone_name = "D. pėda"
 title = "Dešiniosios pėdos griaučiai (lot. ossa pedis)"
 description = "Sudaryta iš keturiolikos pirštakaulių (ossa digitorum pedis), penkių padikaulių (ossa metatarsi) ir septynių čiurnos kaulų (ossa tarsi)"
 image = "res://assets/pedis.png"
 
 [node name="Left_foot" parent="Bones" instance=ExtResource( 2 )]
 id = 29
+bone_name = "K. pėda"
 title = "Kairiosios pėdos griaučiai (lot. ossa pedis)"
 description = "Sudaryta iš keturiolikos pirštakaulių (ossa digitorum pedis), penkių padikaulių (ossa metatarsi) ir septynių čiurnos kaulų (ossa tarsi)"
 image = "res://assets/pedis.png"

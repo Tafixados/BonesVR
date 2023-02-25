@@ -29,10 +29,7 @@ func pick_up(by):
 	mode = RigidBody.MODE_STATIC
 	#collision_layer = 0
 	#collision_mask = 0
-	if Singleton.language == "LT":
-		label.text = "Nuspauskite gaiduką kaulo skenavimui"
-	else:
-		label.text = "Press the trigger to scan the bone"	
+	label.text = "Nuspauskite gaiduką, kad skenuoti kaulą"
 	
 	#Reparent
 	original_parent.remove_child(self)
