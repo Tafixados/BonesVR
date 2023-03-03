@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=2]
+[gd_scene load_steps=67 format=2]
 
 [ext_resource path="res://model imports/controllers/left_controller.tscn" type="PackedScene" id=1]
 [ext_resource path="res://model imports/controllers/right_controller.tscn" type="PackedScene" id=2]
@@ -21,6 +21,8 @@
 [ext_resource path="res://Elements/Objects/reset_button.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Functions/UI/Background.gd" type="Script" id=20]
 [ext_resource path="res://Functions/UI/Button.gd" type="Script" id=21]
+[ext_resource path="res://assets/audio/bgm.ogg" type="AudioStream" id=22]
+[ext_resource path="res://Functions/UI/CanvasLayer.gd" type="Script" id=23]
 [ext_resource path="res://model imports/Environment/sewer.glb" type="PackedScene" id=27]
 [ext_resource path="res://model imports/Environment/Floor2.glb" type="PackedScene" id=28]
 [ext_resource path="res://model imports/Environment/grate.glb" type="PackedScene" id=38]
@@ -84,8 +86,8 @@ points = PoolVector3Array( 0, 0.347329, -0.797215, 0.847379, 0.73748, -0.436488,
 points = PoolVector3Array( -0.766467, 0.4698, -0.459976, 0, 0.745879, -0.889223, 0, 0.745879, -0.981232, 0, 0.101946, -0.521297, -0.766467, 0.745879, -0.429289, 0, 0.316696, -0.429289, -0.521231, 0.715183, -0.858536, -0.398697, 0.316696, -0.674681, -0.275995, 0.101946, -0.429289, -0.0306755, 0.4698, -0.889223, -0.858578, 0.745879, -0.521297, -0.429289, 0.439166, -0.766527, -0.551823, 0.255303, -0.429289, -0.0920265, 0.255303, -0.70526, -0.00769272, 0.107716, -0.434234, -0.275995, 0.101946, -0.459976, -0.858578, 0.684549, -0.429289, -0.521231, 0.745879, -0.858536, -0.0306755, 0.745879, -0.858536, -0.0306755, 0.684549, -0.981232, 0, 0.347329, -0.797215, -0.398697, 0.255303, -0.613306, -0.766467, 0.500496, -0.490718, -0.398697, 0.4698, -0.797215, -0.551823, 0.255303, -0.459976, -0.858578, 0.715183, -0.521297, -0.490556, 0.500496, -0.766527, -0.7052, 0.715183, -0.429289, -0.429289, 0.715183, -0.889223, -0.337346, 0.255303, -0.643993, -0.0920265, 0.285936, -0.73584, -0.766467, 0.4698, -0.429289, -0.0306755, 0.193973, -0.643993, 0, 0.531193, -0.919803, -0.153462, 0.531193, -0.889223, -0.061351, 0.745879, -0.981232, -0.0920265, 0.132643, -0.551985 )
 
 [sub_resource type="CylinderShape" id=13]
-radius = 0.565062
 height = 0.0569691
+radius = 0.565062
 
 [sub_resource type="ViewportTexture" id=60]
 viewport_path = NodePath("Environment/Room/Brazier/Area/Atlas/Viewport")
@@ -902,8 +904,8 @@ outline_size = 3
 font_data = ExtResource( 11 )
 
 [sub_resource type="CylinderShape" id=12]
-radius = 0.313431
 height = 0.126844
+radius = 0.313431
 
 [sub_resource type="BoxShape" id=4]
 extents = Vector3( 1.00926, 0.0876314, 0.687902 )
@@ -920,13 +922,16 @@ extents = Vector3( 0.863535, 0.248298, 0.0323636 )
 [node name="Spatial" type="Spatial"]
 script = ExtResource( 3 )
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource( 23 )
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer"]
 scale = Vector2( 0.535149, 0.535149 )
 texture = ExtResource( 15 )
 centered = false
 script = ExtResource( 20 )
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="CanvasLayer"]
 margin_left = 107.0
 margin_top = 96.0
 margin_right = 805.0
@@ -936,9 +941,18 @@ icon = ExtResource( 12 )
 flat = true
 expand_icon = true
 script = ExtResource( 21 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer"]
+stream = ExtResource( 22 )
+autoplay = true
+
+[node name="VSlider" type="VSlider" parent="CanvasLayer"]
+margin_left = 8.0
+margin_top = 25.0
+margin_right = 40.0
+margin_bottom = 233.0
+min_value = -10.0
+max_value = 0.0
 
 [node name="ARVROrigin" type="ARVROrigin" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.335558 )
@@ -1006,7 +1020,10 @@ render_target_update_mode = 3
 margin_right = 550.0
 margin_bottom = 1100.0
 custom_fonts/font = SubResource( 54 )
-text = "Jums reikia surinkti pilnus žmogaus griaučius - nuo grindų paimkite ir reikiamoje vietoje įstatykite kaulus į žmogaus kūną.
+text = "
+
+
+Jums reikia surinkti pilnus žmogaus griaučius - nuo grindų paimkite ir reikiamoje vietoje įstatykite kaulus į žmogaus kūną.
 
 Naudojantis rankiniu skaitytuvu galite sužinoti kaulo pavadinimą.
 
@@ -1015,7 +1032,7 @@ align = 1
 autowrap = true
 
 [node name="Sprite3D" type="Sprite3D" parent="Environment/Room/Sign"]
-transform = Transform( 7.43094e-09, -1.12204e-15, 1, -2.56693e-08, -0.17, 5.92923e-21, 0.17, -2.56693e-08, -4.37114e-08, 1.3233, 0.930181, 0.238207 )
+transform = Transform( 6.97306e-09, -1.0529e-15, 0.938382, -2.40876e-08, -0.159525, 5.56388e-21, 0.159525, -2.40876e-08, -4.1018e-08, 1.3233, 0.918246, 0.250615 )
 offset = Vector2( 250, 0 )
 texture = SubResource( 59 )
 
@@ -1025,7 +1042,6 @@ transform = Transform( -2.62268e-08, 0, -0.6, 0, 0.7, 0, 0.6, 0, -2.62268e-08, 0
 [node name="Brazier_mesh" type="MeshInstance" parent="Environment/Room/Brazier"]
 transform = Transform( 0.418, 0, -3.55271e-15, 0, 0.3, 0, 3.55271e-15, 0, 0.418, -0.00430202, 0.0725349, 0.00143212 )
 mesh = SubResource( 36 )
-material/0 = null
 
 [node name="CollisionShape10" type="CollisionShape" parent="Environment/Room/Brazier"]
 transform = Transform( 0.418, 0, 0, 0, 0.3, 0, 0, 0, 0.418, 0, 0.0791452, 0 )
@@ -1218,7 +1234,7 @@ transform = Transform( 0.61577, 0, -0.347082, 0, 0.706851, 0, 0.347082, 0, 0.615
 transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -7.47656, 5.30935, -3.05571 )
 
 [node name="Flame" parent="Environment/Room/Cosmetics/torch2" instance=ExtResource( 17 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.532169, 0.359111, 0 )
+transform = Transform( 1, 0, 4.26326e-14, 0, 1, 0, -4.26326e-14, 0, 1, 0.578578, 0.345512, 0.00581884 )
 
 [node name="ladder" parent="Environment/Room/Cosmetics" instance=ExtResource( 48 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.70307, 7.08563, 0 )
@@ -1241,6 +1257,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000929832, 0.0324095, 0.163
 [node name="button" parent="Environment" instance=ExtResource( 19 )]
 transform = Transform( -0.156698, -8.43367e-07, 0.474811, -5.32907e-15, 0.5, 8.88107e-07, -0.474811, 2.78329e-07, -0.156698, 0.335043, 0.695252, 1.87137 )
 
+[connection signal="value_changed" from="CanvasLayer/VSlider" to="CanvasLayer" method="_on_VSlider_value_changed"]
 [connection signal="body_entered" from="Environment/Room/Brazier/Area" to="Environment/Room/Brazier/Area" method="_on_Area_body_entered"]
 [connection signal="animation_finished" from="Environment/Room/Brazier/Area/Atlas/AnimationPlayer2" to="Environment/Room/Brazier/Area/Atlas" method="_on_AnimationPlayer2_animation_finished"]
 [connection signal="animation_finished" from="Environment/Room/Brazier/Area/Atlas/AnimationPlayer" to="Environment/Room/Brazier/Area/Atlas" method="_on_AnimationPlayer_animation_finished"]

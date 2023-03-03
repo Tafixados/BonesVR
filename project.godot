@@ -20,6 +20,10 @@ Singleton="*res://Functions/Global/Singleton.gd"
 Global="*res://Functions/Global/Global.tscn"
 JSnode="*res://Functions/Global/JSnode.gd"
 
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/godot-openxr/plugin.cfg", "res://addons/randomAudioStreamPlayer/plugin.cfg" )
+
 [gdnative]
 
 singletons=[ "res://addons/godot-openxr/config/godot_openxr.gdnlib" ]

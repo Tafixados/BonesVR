@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/skel5.ogg-18db9a315680f758d77dc0ffdd6e9424.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/skel5.ogg"
+dest_files=[ "res://.import/skel5.ogg-18db9a315680f758d77dc0ffdd6e9424.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

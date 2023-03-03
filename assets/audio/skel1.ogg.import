@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/skel1.ogg-cc727b77f7ccd066e64a4b54076d2725.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/skel1.ogg"
+dest_files=[ "res://.import/skel1.ogg-cc727b77f7ccd066e64a4b54076d2725.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

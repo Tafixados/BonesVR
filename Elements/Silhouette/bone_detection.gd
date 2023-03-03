@@ -8,9 +8,9 @@ func Connect(body):
 		$model.set_visible(true)
 		Singleton.bone_placed()
 		emit_signal("bone_entered")
+		get_parent().get_node("SuccessSound").play()
 		var sendmessage = "setAnswer(" + body.id + ",true,true,true);"
 		JavaScript.eval(sendmessage)
-
 
 func _on_Skull_body_entered(body):
 	Connect(body)

@@ -2,12 +2,13 @@ extends Spatial
  
 var webxr_interface
 var vr_supported = false
- 
+
+var button
+
 func _ready() -> void:
-	$Sprite.scale.x = OS.get_window_size().x * 0.000533
-	$Sprite.scale.y = OS.get_window_size().y * 0.0008
-	$Button.connect("pressed", self, "_on_Button_pressed")
- 
+	button = $CanvasLayer/Button
+	button.connect("pressed", self, "_on_Button_pressed")
+
 	webxr_interface = ARVRServer.find_interface("WebXR")
 	if webxr_interface:
 		# WebXR uses a lot of asynchronous callbacks, so we connect to various
@@ -38,6 +39,7 @@ func _webxr_session_supported(session_mode: String, supported: bool) -> void:
 		vr_supported = supported
  
 func _on_Button_pressed() -> void:
+	
 	if not vr_supported:
 		OS.alert("Your browser doesn't support VR")
 		return
@@ -57,7 +59,7 @@ func _on_Button_pressed() -> void:
 	webxr_interface.required_features = 'local-floor'
 	webxr_interface.optional_features = 'bounded-floor'
 	Singleton.reset_time()
- 
+	$CanvasLayer.visible = false
 	# This will return false if we're unable to even request the session,
 	# however, it can still fail asynchronously later in the process, so we
 	# only know if it's really succeeded or failed when our 
@@ -65,9 +67,10 @@ func _on_Button_pressed() -> void:
 	if not webxr_interface.initialize():
 		OS.alert("Failed to initialize")
 		return
+	
  
 func _webxr_session_started() -> void:
-	$Button.visible = false
+	button.visible = false
 	# This tells Godot to start rendering to the headset.
 	get_viewport().arvr = true
 	# This will be the reference space type you ultimately got, out of the
@@ -76,7 +79,7 @@ func _webxr_session_started() -> void:
 	print ("Reference space type: " + webxr_interface.reference_space_type)
  
 func _webxr_session_ended() -> void:
-	$Button.visible = true
+	button.visible = true
 	# If the user exits immersive mode, then we tell Godot to render to the web
 	# page again.
 	get_viewport().arvr = false

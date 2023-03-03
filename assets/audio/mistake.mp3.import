@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/mistake.mp3-dac4a1e6bfe85043a5d781dad6a4ea5e.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/mistake.mp3"
+dest_files=[ "res://.import/mistake.mp3-dac4a1e6bfe85043a5d781dad6a4ea5e.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
