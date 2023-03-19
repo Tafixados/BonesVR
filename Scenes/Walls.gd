@@ -20,8 +20,8 @@ func _on_Walls_body_entered(body):
 		# Start playing the audio
 		audio_player.play()
 		
-		var sendmessage = "setAnswer(" + body.id + ",true,false,false);"
-		JavaScript.eval(sendmessage)
+		#var sendmessage = "setAnswer(" + body.id + ",true,false,false);"
+		#JavaScript.eval(sendmessage)
 
 func _on_audio_finished(audio_player):
 	# Delete the audio player child node using the queue_free() method

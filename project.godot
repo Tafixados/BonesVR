@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node",
+"class": "Scorm",
+"language": "GDScript",
+"path": "res://Functions/SCORM/Scorm.gd"
+} ]
+_global_script_class_icons={
+"Scorm": ""
+}
+
 [application]
 
 config/name="Bones"

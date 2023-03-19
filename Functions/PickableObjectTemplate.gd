@@ -16,6 +16,7 @@ export var bone_name = "Kaulas"
 export var title = "Kaulas (lot. ossa)"
 export var description = "Paskirtis"
 export var image = ""
+export var points = 3
 
 #Being picked up
 func pick_up(by):
@@ -81,6 +82,9 @@ func turn_static():
 
 func out_of_bounds():
 	global_transform.origin = original_global_position
+	if points > 0:
+		points -= 1
+	
 
 func _on_Skull_bone_entered():
 	queue_free()

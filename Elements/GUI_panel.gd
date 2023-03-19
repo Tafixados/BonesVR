@@ -7,8 +7,6 @@ func _ready():
 func update_label():
 	if Singleton.bones_placed >= 29:
 		label.text = "Sveikiname! Viskas pabaigta! "
-		#label.newline()	//richlabeltext method
-		JavaScript.eval("setScore();")
 	else:
 		label.text = "Sudėta kaulų: " + str(Singleton.bones_placed) + "/29"
 

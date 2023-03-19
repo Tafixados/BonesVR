@@ -6,7 +6,7 @@ signal bone_entered
 func Connect(body):
 	if body.get_name() == detect:
 		$model.set_visible(true)
-		Singleton.bone_placed()
+		Singleton.bone_placed(body.points)
 		emit_signal("bone_entered")
 		get_parent().get_node("SuccessSound").play()
 		var sendmessage = "setAnswer(" + body.id + ",true,true,true);"
