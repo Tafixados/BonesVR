@@ -12,11 +12,25 @@ var picked_up_by = null
 
 #Description for brazier
 export var id = 0
-export var bone_name = "Kaulas"
-export var title = "Kaulas (lot. ossa)"
-export var description = "Paskirtis"
-export var image = ""
-export var points = 3
+var bone_name = "Kaulas"
+var title = "(lot. ossa)"
+var description = "Paskirtis"
+var image = ""
+var points = 3
+
+#var model
+
+func _ready():
+	bone_name = BoneInfo.get_value(str(id), "Name")
+	title = BoneInfo.get_value(str(id), "Title")
+	description = BoneInfo.get_value(str(id), "Description")
+	image = BoneInfo.get_value(str(id), "Image")
+		
+	original_collision_mask = collision_mask
+	original_collision_layer = collision_layer
+	original_global_position = global_transform.origin
+	set_timer()
+	Singleton.MistakesArray[id-1][0] = bone_name
 
 #Being picked up
 func pick_up(by):
@@ -61,12 +75,6 @@ func let_go(impulse = Vector3(0.0, 0.0, 0.0)):
 		#No longer picked up
 		picked_up_by = null
 
-func _ready():
-	original_collision_mask = collision_mask
-	original_collision_layer = collision_layer
-	original_global_position = global_transform.origin
-	set_timer()
-	Singleton.MistakesArray[id-1][0] = bone_name
 
 func set_timer():
 	timer = Timer.new()

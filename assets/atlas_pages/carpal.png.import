@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pelvis.png-aa03c067c602f01ccc3b6fbd606db2e1.stex"
+path="res://.import/carpal.png-a4cd913b98b0dda7c38c0e442c4bde71.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pelvis.png"
-dest_files=[ "res://.import/pelvis.png-aa03c067c602f01ccc3b6fbd606db2e1.stex" ]
+source_file="res://assets/atlas_pages/carpal.png"
+dest_files=[ "res://.import/carpal.png-a4cd913b98b0dda7c38c0e442c4bde71.stex" ]
 
 [params]
 

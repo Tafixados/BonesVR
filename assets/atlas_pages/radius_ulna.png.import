@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/femur.png-925a51e0cfcd8cb0246d15f1a1fadd00.stex"
+path="res://.import/radius_ulna.png-b8441d447b76deab1643362f40208a03.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/femur.png"
-dest_files=[ "res://.import/femur.png-925a51e0cfcd8cb0246d15f1a1fadd00.stex" ]
+source_file="res://assets/atlas_pages/radius_ulna.png"
+dest_files=[ "res://.import/radius_ulna.png-b8441d447b76deab1643362f40208a03.stex" ]
 
 [params]
 

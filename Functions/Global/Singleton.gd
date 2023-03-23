@@ -26,9 +26,12 @@ var mode = ""
 var success = "" #status = [passed, failed, unknown]
 var status = "" #status = [completed, incomplete, not attempted, browsed]
 
+var learner_name = ""
+
 func _ready():
 	add_child(scorm)
 	mode = scorm.get_mode() #either normal or browse I think
+	learner_name = scorm.get_learner_name()
 	for i in range(29):
 		MistakesArray.append(["Kaulas", 0])
 
@@ -90,7 +93,7 @@ func set_success():
 		scorm.set_success(success)
 
 func calculate_score():
-	final_score = tentative_score * 100 / 87
+	final_score = clamp(tentative_score * 100 / 87, 0, 100)
 	set_success()
 	set_status()
 	scorm.set_score(final_score)

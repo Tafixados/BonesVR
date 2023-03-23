@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cranium_mandible.png-d537017d3f4afe6a200825c8cad8dcb6.stex"
+path="res://.import/tibia_fibula.png-ac93a306f84b96e6523eef488bb61b6f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cranium_mandible.png"
-dest_files=[ "res://.import/cranium_mandible.png-d537017d3f4afe6a200825c8cad8dcb6.stex" ]
+source_file="res://assets/atlas_pages/tibia_fibula.png"
+dest_files=[ "res://.import/tibia_fibula.png-ac93a306f84b96e6523eef488bb61b6f.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/spine.png-d63309336e83438f9614fe92d248b719.stex"
+path="res://.import/scapula.png-f29d54e2078f8f56dd3da23837270195.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/spine.png"
-dest_files=[ "res://.import/spine.png-d63309336e83438f9614fe92d248b719.stex" ]
+source_file="res://assets/atlas_pages/scapula.png"
+dest_files=[ "res://.import/scapula.png-f29d54e2078f8f56dd3da23837270195.stex" ]
 
 [params]
 

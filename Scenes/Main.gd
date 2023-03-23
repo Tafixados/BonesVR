@@ -67,8 +67,7 @@ func _on_Button_pressed() -> void:
 	if not webxr_interface.initialize():
 		OS.alert("Failed to initialize")
 		return
-	
- 
+
 func _webxr_session_started() -> void:
 	button.visible = false
 	# This tells Godot to start rendering to the headset.

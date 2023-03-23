@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/patella.png-7fa5f70e9a4c923729dda4a03b41455f.stex"
+path="res://.import/femur.png-0504b8807d918c76d5421ac117fa074e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/patella.png"
-dest_files=[ "res://.import/patella.png-7fa5f70e9a4c923729dda4a03b41455f.stex" ]
+source_file="res://assets/atlas_pages/femur.png"
+dest_files=[ "res://.import/femur.png-0504b8807d918c76d5421ac117fa074e.stex" ]
 
 [params]
 

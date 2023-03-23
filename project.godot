@@ -29,6 +29,7 @@ config/icon="res://icon.png"
 Singleton="*res://Functions/Global/Singleton.gd"
 Global="*res://Functions/Global/Global.tscn"
 JSnode="*res://Functions/Global/JSnode.gd"
+BoneInfo="*res://Functions/Global/bone_info.gd"
 
 [editor_plugins]
 

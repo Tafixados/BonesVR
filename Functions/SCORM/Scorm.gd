@@ -56,3 +56,10 @@ func get_mode():
 	if Engine.has_singleton("JavaScript"):
 		return JavaScript.eval("pipwerks.SCORM.GetMode()")
 
+func get_learner_name():
+	if Engine.has_singleton("JavaScript"):
+		return JavaScript.eval("pipwerks.SCORM.GetLearnerName()")
+
+#func submit_bone(id, mistakes, timeTaken):
+#	if Engine.has_singleton("JavaScript"):
+#		return JavaScript.eval("pipwerks.SCORM.SetQuestionScore(id, id, \"true-false\", \"true\", \"true\", \"correct\", mistakes, timeTaken)")

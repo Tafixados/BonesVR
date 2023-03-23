@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/scapula.png-c7e9fb7164f9a1cd5e3d46c3bde4d0f5.stex"
+path="res://.import/ribs_sternum.png-263aea38cb5afe9dd5a7b865bd61e4cc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/scapula.png"
-dest_files=[ "res://.import/scapula.png-c7e9fb7164f9a1cd5e3d46c3bde4d0f5.stex" ]
+source_file="res://assets/atlas_pages/ribs_sternum.png"
+dest_files=[ "res://.import/ribs_sternum.png-263aea38cb5afe9dd5a7b865bd61e4cc.stex" ]
 
 [params]
 

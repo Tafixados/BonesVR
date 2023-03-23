@@ -19,16 +19,15 @@ surfaces/0 = {
 }
 
 [sub_resource type="CylinderShape" id=2]
-radius = 0.182195
 height = 0.197276
+radius = 0.182195
 
-[node name="button" type="StaticBody"]
+[node name="reset_button" type="StaticBody"]
 script = ExtResource( 2 )
 
 [node name="pCylinder1" type="MeshInstance" parent="."]
 transform = Transform( 0.16383, -0.114715, 5.01437e-09, 0, -8.74228e-09, -0.2, 0.114715, 0.16383, -7.16125e-09, 0, 0.114775, 0 )
 mesh = SubResource( 1 )
-material/0 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 shape = SubResource( 2 )

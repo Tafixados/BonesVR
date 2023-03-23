@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tibia_fibula.png-6b2c4c9e9c919c13f83b88eec668dddf.stex"
+path="res://.import/patella.png-c0ee343d581a150d93be109911267e7f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tibia_fibula.png"
-dest_files=[ "res://.import/tibia_fibula.png-6b2c4c9e9c919c13f83b88eec668dddf.stex" ]
+source_file="res://assets/atlas_pages/patella.png"
+dest_files=[ "res://.import/patella.png-c0ee343d581a150d93be109911267e7f.stex" ]
 
 [params]
 

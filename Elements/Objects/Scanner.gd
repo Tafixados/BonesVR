@@ -100,6 +100,6 @@ func _process(delta):
 		if raycast.is_colliding():
 			var scanned_object = raycast.get_collider()
 			if scanned_object.has_method('out_of_bounds'):
-				label.text = str(scanned_object.title)
+				label.text = str(scanned_object.bone_name) + " " + str(scanned_object.title)
 		else:
-			label.text = ""
+			label.text = "Nieko nerasta"

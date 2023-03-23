@@ -1,0 +1,182 @@
+{
+	"1":{
+		"Name": "Kaukolė, galvos griaučiai",
+		"Title": "(lot. cranium)",
+		"Description": "Keletas tarpusavyje suaugusių kaulų, sudarančių ašinio skeleto viršutinę dalį.",
+		"Image": "res://assets/atlas_pages/cranium_mandible.png"
+	},
+	"2":{
+		"Name": "Apatinis žandikaulis",
+		"Title": "(lot. mandibula)",
+		"Description": "Stambus, neporinis, neorinis kaulas.",
+		"Image": "res://assets/atlas_pages/cranium_mandible.png"
+	},
+	"3":{
+		"Name": "Stuburas",
+		"Title": "(angl. spine)",
+		"Description": "Atraminė ašis, sudaryta iš 33 - 34 slankstelių.",
+		"Image": "res://assets/atlas_pages/spine.png"
+	},
+	"4":{
+		"Name": "Kaulinis dubuo",
+		"Title": "(angl. pelvis)",
+		"Description": "Kaulas, esantis stuburo atramos taške. Dubuo jungia dalį gūžduobių.",
+		"Image": "res://assets/atlas_pages/pelvis.png"
+	},
+	"5":{
+		"Name": "Krūtinkaulis",
+		"Title": "(lot. sternum)",
+		"Description": "Plokščiasis kaulas, esantis krūtinės ląstos priekinėje sienoje. Šis kaulas yra siaurėjantis į apačią ir tradiciškai aprašomas kaip kardas.",
+		"Image": "res://assets/atlas_pages/ribs_sternum.png"
+	},
+	"6":{
+		"Name": "Dešinieji šonkauliai",
+		"Title": "(angl. ribs, lot. costae)",
+		"Description": "Krūtinės ląstos kaulai. Yra 12 porų (arba 24 kaulai). Šonkauliai su krūtinės slanksteliais sudaro sąnarius. Raumenų pakeliami, jie padidina krūtinės tūrį ir padeda įkvėpti, ir priešingai, – kiti raumenys šonkaulius nuleidžia ir padeda iškvėpti.",
+		"Image": "res://assets/atlas_pages/ribs_sternum.png"
+	},
+	"7":{
+		"Name": "Kairieji šonkauliai",
+		"Title": "(angl. ribs, lot. costae)",
+		"Description": "Krūtinės ląstos kaulai. Yra 12 porų (arba 24 kaulai). Šonkauliai su krūtinės slanksteliais sudaro sąnarius. Raumenų pakeliami, jie padidina krūtinės tūrį ir padeda įkvėpti, ir priešingai, – kiti raumenys šonkaulius nuleidžia ir padeda iškvėpti.",
+		"Image": "res://assets/atlas_pages/ribs_sternum.png"
+	},
+	"8":{
+		"Name": "Dešinysis raktikaulis",
+		"Title": "(lot. clavicula)",
+		"Description": "Ilgasis, ištemptos S raidės pavidalo kaulas. Kaulas lengvai apčiuopiamas beveik per visą jo ilgį tarp minkštųjų audinių ties kaklo ir krūtinės riba.",
+		"Image": "res://assets/atlas_pages/clavicle.png"
+	},
+	"9":{
+		"Name": "Kairysis raktikaulis",
+		"Title": "(lot. clavicula)",
+		"Description": "Ilgasis, ištemptos S raidės pavidalo kaulas. Kaulas lengvai apčiuopiamas beveik per visą jo ilgį tarp minkštųjų audinių ties kaklo ir krūtinės riba.",
+		"Image": "res://assets/atlas_pages/clavicle.png"
+	},
+	"10":{
+		"Name": "Dešinioji mentė",
+		"Title": "(lot. scapula)",
+		"Description": "Pečių lanko porinis plokščias kaulas, esantis užpakalinėje pečių lanko pusėje.",
+		"Image": "res://assets/atlas_pages/scapula.png"
+	},
+	"11":{
+		"Name": "Kairioji mentė",
+		"Title": "(lot. scapula)",
+		"Description": "Pečių lanko porinis plokščias kaulas, esantis užpakalinėje pečių lanko pusėje.",
+		"Image": "res://assets/atlas_pages/scapula.png"
+	},
+	"12":{
+		"Name": "Dešinysis žastikaulis",
+		"Title": "(lot. humerus)",
+		"Description": "Ilgasis rankų kaulas, pridėtinio skeleto dalis. Vienintelis žasto kaulas.",
+		"Image": "res://assets/atlas_pages/humerus.png"
+	},
+	"13":{
+		"Name": "Kairysis žastikaulis",
+		"Title": "(lot. humerus)",
+		"Description": "Ilgasis rankų kaulas, pridėtinio skeleto dalis. Vienintelis žasto kaulas.",
+		"Image": "res://assets/atlas_pages/humerus.png"
+	},
+	"14":{
+		"Name": "Dešinysis alkūnkaulis",
+		"Title": "(lot. ulna)",
+		"Description": "Vienas iš dviejų dilbio kaulų. Priglaudus delnus prie šlaunų, dilbio kaulai būna susikryžiavę, o atsukus delnus į priekį, jie išsidėsto lygiagrečiai. Tada alkūnkaulis yra vidinėje dilbio pusėje.",
+		"Image": "res://assets/atlas_pages/radius_ulna.png"
+	},
+	"15":{
+		"Name": "Kairysis alkūnkaulis",
+		"Title": "(lot. ulna)",
+		"Description": "Vienas iš dviejų dilbio kaulų. Priglaudus delnus prie šlaunų, dilbio kaulai būna susikryžiavę, o atsukus delnus į priekį, jie išsidėsto lygiagrečiai. Tada alkūnkaulis yra vidinėje dilbio pusėje.",
+		"Image": "res://assets/atlas_pages/radius_ulna.png"
+	},
+	"16":{
+		"Name": "Dešinysis stipinkaulis",
+		"Title": "(lot. radius)",
+		"Description": "Kai delnas atgręžtas į priekį, šis dilbio kaulas guli šoninėje pusėje. Jis priklauso ilgųjų kaulų rūšiai.",
+		"Image": "res://assets/atlas_pages/radius_ulna.png"
+	},
+	"17":{
+		"Name": "Kairysis stipinkaulis",
+		"Title": "(lot. radius)",
+		"Description": "Kai delnas atgręžtas į priekį, šis dilbio kaulas guli šoninėje pusėje. Jis priklauso ilgųjų kaulų rūšiai.",
+		"Image": "res://assets/atlas_pages/radius_ulna.png"
+	},
+	"18":{
+		"Name": "Dešiniosios plaštakos griaučiai",
+		"Title": "(angl. carpal bones)",
+		"Description": "Plaštakos griaučius sudaro 27 kaulai. Jie skirstomi į riešakaulius (ossa carpi), delnakaulius (ossa metacarpi) ir pirštakaulius (ossa digitorum).",
+		"Image": "res://assets/atlas_pages/carpal.png"
+	},
+	"19":{
+		"Name": "Kairiosios plaštakos griaučiai",
+		"Title": "(angl. carpal bones)",
+		"Description": "Plaštakos griaučius sudaro 27 kaulai. Jie skirstomi į riešakaulius (ossa carpi), delnakaulius (ossa metacarpi) ir pirštakaulius (ossa digitorum).",
+		"Image": "res://assets/atlas_pages/carpal.png"
+	},
+	"20":{
+		"Name": "Dešinysis šlaunikaulis",
+		"Title": "(lot. femur)",
+		"Description": "Šlaunikaulis yra didžiausias iš ilgųjų kaulų.  Tai vienintelis šlaunies kaulas. Viršutinis galas, arba galva, įsitvirtina į gūžduobę; apatinis galas baigiasi krumpliais, kurie yra kelio sąnario dalys. Prie jo priglunda girnelė, raiščiu sujungta su blauzdikauliu.",
+		"Image": "res://assets/atlas_pages/femur.png"
+	},
+	"21":{
+		"Name": "Kairysis šlaunikaulis",
+		"Title": "(lot. femur)",
+		"Description": "Šlaunikaulis yra didžiausias iš ilgųjų kaulų.  Tai vienintelis šlaunies kaulas. Viršutinis galas, arba galva, įsitvirtina į gūžduobę; apatinis galas baigiasi krumpliais, kurie yra kelio sąnario dalys. Prie jo priglunda girnelė, raiščiu sujungta su blauzdikauliu.",
+		"Image": "res://assets/atlas_pages/femur.png"
+	},
+	"22":{
+		"Name": "Dešinioji girnelė",
+		"Title": "(lot. patella)",
+		"Description": "Tvirta kaulinė plokštelė, raiščiu sujungta su blauzdikauliu.",
+		"Image": "res://assets/atlas_pages/patella.png"
+	},
+	"23":{
+		"Name": "Kairioji girnelė",
+		"Title": "(lot. patella)",
+		"Description": "Tvirta kaulinė plokštelė, raiščiu sujungta su blauzdikauliu.",
+		"Image": "res://assets/atlas_pages/patella.png"
+	},
+	"24":{
+		"Name": "Dešinysis blauzdikaulis",
+		"Title": "(lot. tibia)",
+		"Description": "Tai stipresnis blauzdos kaulas.",
+		"Image": "res://assets/atlas_pages/tibia_fibula.png"
+	},
+	"25":{
+		"Name": "Kairysis blauzdikaulis",
+		"Title": "(lot. tibia)",
+		"Description": "Tai stipresnis blauzdos kaulas.",
+		"Image": "res://assets/atlas_pages/tibia_fibula.png"
+	},
+	"26":{
+		"Name": "Dešinysis šeivikaulis",
+		"Title": "(lot. fibula)",
+		"Description": "Antras blauzdos kaulas, gulintis į šoną ir šiek tiek atgal nuo blauzdikaulio. Tai laibas ilgasis kaulas.",
+		"Image": "res://assets/atlas_pages/tibia_fibula.png"
+	},
+	"27":{
+		"Name": "Kairysis šeivikaulis",
+		"Title": "(lot. fibula)",
+		"Description": "Antras blauzdos kaulas, gulintis į šoną ir šiek tiek atgal nuo blauzdikaulio. Tai laibas ilgasis kaulas.",
+		"Image": "res://assets/atlas_pages/tibia_fibula.png"
+	},
+	"28":{
+		"Name": "Dešiniosios pėdos griaučiai",
+		"Title": "(lot. ossa pedis)",
+		"Description": "Sudaryta iš keturiolikos pirštakaulių (ossa digitorum pedis), penkių padikaulių (ossa metatarsi) ir septynių čiurnos kaulų (ossa tarsi)",
+		"Image": "res://assets/atlas_pages/pedis.png"
+	},
+	"29":{
+		"Name": "Kairiosios pėdos griaučiai",
+		"Title": "(lot. ossa pedis)",
+		"Description": "Sudaryta iš keturiolikos pirštakaulių (ossa digitorum pedis), penkių padikaulių (ossa metatarsi) ir septynių čiurnos kaulų (ossa tarsi)",
+		"Image": "res://assets/atlas_pages/pedis.png"
+	},
+	"default":{
+		"Name": "Kaulas",
+		"Title": "(lot. ossa)",
+		"Description": "Paskirtis",
+		"Image": ""
+	}	
+}
