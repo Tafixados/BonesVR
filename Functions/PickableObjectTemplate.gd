@@ -17,6 +17,8 @@ var title = "(lot. ossa)"
 var description = "Paskirtis"
 var image = ""
 var points = 3
+var mistakes = 0
+var brazier_uses = 0
 
 #var model
 
@@ -30,7 +32,6 @@ func _ready():
 	original_collision_layer = collision_layer
 	original_global_position = global_transform.origin
 	set_timer()
-	Singleton.MistakesArray[id-1][0] = bone_name
 
 #Being picked up
 func pick_up(by):
@@ -76,6 +77,8 @@ func let_go(impulse = Vector3(0.0, 0.0, 0.0)):
 		picked_up_by = null
 
 
+# Since the game can't handle constantly simulating tons of rigidbodies
+# we revert it to a static body after a few seconds of being let go.
 func set_timer():
 	timer = Timer.new()
 	timer.wait_time = 5
@@ -92,91 +95,3 @@ func out_of_bounds():
 	global_transform.origin = original_global_position
 	if points > 0:
 		points -= 1
-	
-
-func _on_Skull_bone_entered():
-	queue_free()
-
-func _on_Mandible_bone_entered():
-	queue_free()
-
-func _on_Pelvis_bone_entered():
-	queue_free()
-
-func _on_Spine_bone_entered():
-	queue_free()
-
-func _on_Right_femur_bone_entered():
-	queue_free()
-
-func _on_Right_ribs_bone_entered():
-	queue_free()
-
-func _on_Sternum_bone_entered():
-	queue_free()
-
-func _on_Left_ribs_bone_entered():
-	queue_free()
-
-func _on_Left_scapula_bone_entered():
-	queue_free()
-
-func _on_Left_humerus_bone_entered():
-	queue_free()
-
-func _on_Left_radius_bone_entered():
-	queue_free()
-
-func _on_Left_ulna_bone_entered():
-	queue_free()
-
-func _on_Left_hand_bone_entered():
-	queue_free()
-
-func _on_Left_clavicle_bone_entered():
-	queue_free()
-
-func _on_Left_femur_bone_entered():
-	queue_free()
-
-func _on_Left_fibula_bone_entered():
-	queue_free()
-
-func _on_Left_tibia_bone_entered():
-	queue_free()
-
-func _on_Left_foot_bone_entered():
-	queue_free()
-
-func _on_Left_patella_bone_entered():
-	queue_free()
-
-func _on_Right_clavicle_bone_entered():
-	queue_free()
-
-func _on_Right_scapula_bone_entered():
-	queue_free()
-
-func _on_Right_hand_bone_entered():
-	queue_free()
-
-func _on_Right_humerus_bone_entered():
-	queue_free()
-
-func _on_Right_ulna_bone_entered():
-	queue_free()
-
-func _on_Right_radius_bone_entered():
-	queue_free()
-
-func _on_Right_tibia_bone_entered():
-	queue_free()
-
-func _on_Right_fibula_bone_entered():
-	queue_free()
-
-func _on_Right_foot_bone_entered():
-	queue_free()
-
-func _on_Right_patella_bone_entered():
-	queue_free()

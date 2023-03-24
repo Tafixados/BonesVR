@@ -45,90 +45,119 @@
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.39462, 0.183542 )
 
 [node name="Skull" parent="Bones" instance=ExtResource( 26 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
 id = 1
 
 [node name="Mandible" parent="Bones" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
 id = 2
 
 [node name="Spine" parent="Bones" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
 id = 3
 
 [node name="Pelvis" parent="Bones" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
 id = 4
 
 [node name="Sternum" parent="Bones" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
 id = 5
 
 [node name="Right_ribs" parent="Bones" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
 id = 6
 
 [node name="Left_ribs" parent="Bones" instance=ExtResource( 19 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
 id = 7
 
 [node name="Right_clavicle" parent="Bones" instance=ExtResource( 21 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
 id = 8
 
 [node name="Left_clavicle" parent="Bones" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
 id = 9
 
 [node name="Right_scapula" parent="Bones" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
 id = 10
 
 [node name="Left_scapula" parent="Bones" instance=ExtResource( 29 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
 id = 11
 
 [node name="Right_humerus" parent="Bones" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
 id = 12
 
 [node name="Left_humerus" parent="Bones" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
 id = 13
 
 [node name="Right_ulna" parent="Bones" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
 id = 14
 
 [node name="Left_ulna" parent="Bones" instance=ExtResource( 20 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
 id = 15
 
 [node name="Right_radius" parent="Bones" instance=ExtResource( 30 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
 id = 16
 
 [node name="Left_radius" parent="Bones" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
 id = 17
 
 [node name="Right_hand" parent="Bones" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
 id = 18
 
 [node name="Left_hand" parent="Bones" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
 id = 19
 
 [node name="Right_femur" parent="Bones" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
 id = 20
 
 [node name="Left_femur" parent="Bones" instance=ExtResource( 18 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
 id = 21
 
 [node name="Right_patella" parent="Bones" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
 id = 22
 
 [node name="Left_patella" parent="Bones" instance=ExtResource( 27 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
 id = 23
 
 [node name="Right_tibia" parent="Bones" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
 id = 24
 
 [node name="Left_tibia" parent="Bones" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
 id = 25
 
 [node name="Right_fibula" parent="Bones" instance=ExtResource( 22 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
 id = 26
 
 [node name="Left_fibula" parent="Bones" instance=ExtResource( 31 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
 id = 27
 
 [node name="Right_foot" parent="Bones" instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
 id = 28
 
 [node name="Left_foot" parent="Bones" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
 id = 29
 
 [node name="Silhouette" parent="." instance=ExtResource( 28 )]
@@ -155,35 +184,5 @@ transform = Transform( 0.730996, 0.682381, 0, -0.682381, 0.730996, 0, 0, 0, 1, -
 
 [node name="CollisionShape" parent="Silhouette/Collisions/Right_tibia" index="0"]
 transform = Transform( 0.986233, 0.165207, 0.00721192, -0.161231, 0.970357, -0.180031, -0.0367406, 0.17639, 0.983634, 0.0559331, 0, -0.0639832 )
-
-[connection signal="bone_entered" from="Silhouette/Collisions/Skull" to="Bones/Skull" method="_on_Skull_bone_entered"]
-[connection signal="bone_entered" from="Silhouette/Collisions/Mandible" to="Bones/Mandible" method="_on_Mandible_bone_entered"]
-[connection signal="bone_entered" from="Silhouette/Collisions/Pelvis" to="Bones/Pelvis" method="_on_Pelvis_bone_entered"]
-[connection signal="bone_entered" from="Silhouette/Collisions/Spine" to="Bones/Spine" method="_on_Spine_bone_entered"]
-[connection signal="bone_entered" from="Silhouette/Collisions/Right_femur" to="Bones/Right_femur" method="_on_Right_femur_bone_entered"]
-[connection signal="bone_entered" from="Silhouette/Collisions/Right_ribs" to="Bones/Right_ribs" method="_on_Right_ribs_bone_entered"]
-[connection signal="bone_entered" from="Silhouette/Collisions/Sternum" to="Bones/Sternum" method="_on_Sternum_bone_entered"]
-[connection signal="bone_entered" from="Silhouette/Collisions/Left_ribs" to="Bones/Left_ribs" method="_on_Left_ribs_bone_entered"]
-[connection signal="bone_entered" from="Silhouette/Collisions/Left_scapula" to="Bones/Left_scapula" method="_on_Left_scapula_bone_entered"]
-[connection signal="bone_entered" from="Silhouette/Collisions/Left_humerus" to="Bones/Left_humerus" method="_on_Left_humerus_bone_entered"]
-[connection signal="bone_entered" from="Silhouette/Collisions/Left_radius" to="Bones/Left_radius" method="_on_Left_radius_bone_entered"]
-[connection signal="bone_entered" from="Silhouette/Collisions/Left_ulna" to="Bones/Left_ulna" method="_on_Left_ulna_bone_entered"]
-[connection signal="bone_entered" from="Silhouette/Collisions/Left_hand" to="Bones/Left_hand" method="_on_Left_hand_bone_entered"]
-[connection signal="bone_entered" from="Silhouette/Collisions/Left_clavicle" to="Bones/Left_clavicle" method="_on_Left_clavicle_bone_entered"]
-[connection signal="bone_entered" from="Silhouette/Collisions/Left_femur" to="Bones/Left_femur" method="_on_Left_femur_bone_entered"]
-[connection signal="bone_entered" from="Silhouette/Collisions/Left_fibula" to="Bones/Left_fibula" method="_on_Left_fibula_bone_entered"]
-[connection signal="bone_entered" from="Silhouette/Collisions/Left_tibia" to="Bones/Left_tibia" method="_on_Left_tibia_bone_entered"]
-[connection signal="bone_entered" from="Silhouette/Collisions/Left_foot" to="Bones/Left_foot" method="_on_Left_foot_bone_entered"]
-[connection signal="bone_entered" from="Silhouette/Collisions/Left_patella" to="Bones/Left_patella" method="_on_Left_patella_bone_entered"]
-[connection signal="bone_entered" from="Silhouette/Collisions/Right_clavicle" to="Bones/Right_clavicle" method="_on_Right_clavicle_bone_entered"]
-[connection signal="bone_entered" from="Silhouette/Collisions/Right_scapula" to="Bones/Right_scapula" method="_on_Right_scapula_bone_entered"]
-[connection signal="bone_entered" from="Silhouette/Collisions/Right_hand" to="Bones/Right_hand" method="_on_Right_hand_bone_entered"]
-[connection signal="bone_entered" from="Silhouette/Collisions/Right_humerus" to="Bones/Right_humerus" method="_on_Right_humerus_bone_entered"]
-[connection signal="bone_entered" from="Silhouette/Collisions/Right_ulna" to="Bones/Right_ulna" method="_on_Right_ulna_bone_entered"]
-[connection signal="bone_entered" from="Silhouette/Collisions/Right_radius" to="Bones/Right_radius" method="_on_Right_radius_bone_entered"]
-[connection signal="bone_entered" from="Silhouette/Collisions/Right_tibia" to="Bones/Right_tibia" method="_on_Right_tibia_bone_entered"]
-[connection signal="bone_entered" from="Silhouette/Collisions/Right_fibula" to="Bones/Right_fibula" method="_on_Right_fibula_bone_entered"]
-[connection signal="bone_entered" from="Silhouette/Collisions/Right_foot" to="Bones/Right_foot" method="_on_Right_foot_bone_entered"]
-[connection signal="bone_entered" from="Silhouette/Collisions/Right_patella" to="Bones/Right_patella" method="_on_Right_patella_bone_entered"]
 
 [editable path="Silhouette"]

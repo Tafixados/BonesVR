@@ -6,7 +6,7 @@ var vr_supported = false
 var button
 
 func _ready() -> void:
-	button = $CanvasLayer/Button
+	button = $CanvasLayer/MarginContainer/VBoxContainer/HBox1/Container/VBox/ButtonContainer/EnterVR
 	button.connect("pressed", self, "_on_Button_pressed")
 
 	webxr_interface = ARVRServer.find_interface("WebXR")

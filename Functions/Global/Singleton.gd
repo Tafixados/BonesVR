@@ -17,7 +17,6 @@ var bones_placed = 0
 var scoreboard
 var time = 0.0
 var MistakesArray = []
-var brazier_uses = 0
 var total_mistakes = 0
 
 var tentative_score = 0
@@ -35,8 +34,8 @@ func _ready():
 	for i in range(29):
 		MistakesArray.append(["Kaulas", 0])
 
-func bone_placed(points):
-	tentative_score += points
+func bone_placed(body):
+	tentative_score += body.points
 	if bones_placed == 1:
 		reset_time()
 	bones_placed = bones_placed + 1
@@ -69,7 +68,6 @@ func reset_all():
 	reset_time()
 	for row in MistakesArray:
 		row[1] = 0
-	brazier_uses = 0
 
 func set_status():
 	if mode == "browse":

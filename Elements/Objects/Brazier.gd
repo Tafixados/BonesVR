@@ -18,7 +18,7 @@ func create_flame_effect():
 func _on_Area_body_entered(body):
 	if body.has_method('out_of_bounds'):
 		if previous_body != body:
-			Singleton.brazier_uses += 1
+			body.brazier_uses += 1
 			create_flame_effect()
 			var message = str(body.bone_name) + " " + str(body.title) + " - " + str(body.description)
 			Atlas.update_sprite(message, body.image)
