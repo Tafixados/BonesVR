@@ -263,3 +263,7 @@ function goBack() {
 function goForward() {
 	pipwerks.nav.goForward();
 }
+
+function setScore(score) {
+    scorm.SetScore(score);
+}

@@ -1610,6 +1610,7 @@ pipwerks.SCORM.SetSuccessStatus = function(status){
 	}
 };
 
+
 // cmi.suspend_data: Provides information that may be created by a SCO as a result of a learner accessing or interacting with the SCO.
 // cmi.time_limit_action: Indicates what the SCO should do when the maximum time allowed is exceeded.
 // cmi.cmi.total_time: Identifies the sum of all of the learner’s learner session times accumulated in the current learner attempt prior to the current learner session.
@@ -1685,5 +1686,28 @@ pipwerks.nav.goForward = function(){
 	}
 	else {
 	        trace("pipwerks.nav.goForward failed: API is null.");
+	}
+};
+
+/*
+Code appended by @Tafixados. If it's broken past this point, don't use it.
+
+*/
+
+pipwerks.SCORM.setBone = function(number, evaluation, suspended){
+	var API = pipwerks.SCORM.API.getHandle(),
+		scorm = pipwerks.SCORM,
+		trace = pipwerks.UTILS.trace,
+        result = "";
+		baseInteraction = "cmi.interactions_" + number.toString();
+		
+	if(API){
+		scorm.set(baseInteraction + ".id", "kaulas_" + number.toString());
+		scorm.set(baseInteraction + ".result", evaluation);
+		//scorm.set(baseInteraction + ".type", "true-false"); //is this useful information? "choice", "fill-in", "true-false", "numeric"
+		scorm.set("cmi.suspend_data", suspended); //total mistakes and braziers
+	}
+	else {
+	    trace("pipwerks.SCORM.setAnswer failed: API is null.");
 	}
 };

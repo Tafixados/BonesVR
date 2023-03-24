@@ -7,6 +7,7 @@ onready var bgm = $AudioStreamPlayer
 var infoshown = false
 
 var current_bgm = 0
+var timer
 
 var bgm1 = preload("res://assets/audio/bgm1.ogg")
 var bgm2 = preload("res://assets/audio/bgm2.ogg")
@@ -16,7 +17,19 @@ var bgmarray = [bgm1, bgm2, bgm3]
 
 func _ready():
 	bgm.stream = bgmarray[current_bgm]
+	set_timer()
+
+func set_timer():
+	timer = Timer.new()
+	timer.wait_time = 5
+	timer.one_shot = true
+	timer.connect("timeout",self,"start_playing")
+	add_child(timer)
+	timer.start()
+
+func start_playing():
 	bgm.play()
+	timer.queue_free()
 
 func _on_InfoButton_pressed():
 	if (!infoshown):

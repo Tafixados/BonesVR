@@ -1,8 +1,46 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://Functions/SCORM/test.gd" type="Script" id=1]
 [ext_resource path="res://assets/atlas_pages/carpal.png" type="Texture" id=2]
 [ext_resource path="res://Fonts/BAHNSCHRIFT.TTF" type="DynamicFontData" id=3]
+[ext_resource path="res://Elements/Bones/Left_tibia.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Elements/Bones/Spine.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Elements/Bones/Pelvis.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Elements/Bones/Right_femur.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Elements/Bones/Left_foot.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Elements/Bones/Right_ribs.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Elements/Bones/Left_hand.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Elements/Bones/Right_scapula.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Elements/Bones/Right_hand.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Elements/Bones/Right_ulna.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Elements/Bones/Left_humerus.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Elements/Bones/Sternum.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Elements/Bones/Right_patella.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Elements/Bones/Mandible.tscn" type="PackedScene" id=17]
+[ext_resource path="res://addons/randomAudioStreamPlayer/random_audio_stream_player.gd" type="Script" id=18]
+[ext_resource path="res://assets/audio/skel1.ogg" type="AudioStream" id=19]
+[ext_resource path="res://assets/audio/skel2.ogg" type="AudioStream" id=20]
+[ext_resource path="res://assets/audio/skel3.ogg" type="AudioStream" id=21]
+[ext_resource path="res://assets/audio/skel4.ogg" type="AudioStream" id=22]
+[ext_resource path="res://assets/audio/skel5.ogg" type="AudioStream" id=23]
+[ext_resource path="res://assets/audio/skel6.ogg" type="AudioStream" id=24]
+[ext_resource path="res://assets/audio/skel7.ogg" type="AudioStream" id=25]
+[ext_resource path="res://Elements/Bones/Left_fibula.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Elements/Bones/Right_radius.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Elements/Bones/Left_ulna.tscn" type="PackedScene" id=28]
+[ext_resource path="res://Elements/Bones/Left_radius.tscn" type="PackedScene" id=29]
+[ext_resource path="res://Elements/Bones/Left_patella.tscn" type="PackedScene" id=30]
+[ext_resource path="res://Elements/Bones/Left_scapula.tscn" type="PackedScene" id=31]
+[ext_resource path="res://Elements/Bones/Left_clavicle.tscn" type="PackedScene" id=32]
+[ext_resource path="res://Elements/Bones/Right_clavicle.tscn" type="PackedScene" id=33]
+[ext_resource path="res://Elements/Bones/Left_femur.tscn" type="PackedScene" id=34]
+[ext_resource path="res://Elements/Bones/Right_tibia.tscn" type="PackedScene" id=35]
+[ext_resource path="res://Elements/Bones/Right_humerus.tscn" type="PackedScene" id=36]
+[ext_resource path="res://Elements/Silhouette/Silhouette.tscn" type="PackedScene" id=37]
+[ext_resource path="res://Elements/Bones/Skull.tscn" type="PackedScene" id=38]
+[ext_resource path="res://Elements/Bones/Left_ribs.tscn" type="PackedScene" id=39]
+[ext_resource path="res://Elements/Bones/Right_fibula.tscn" type="PackedScene" id=40]
+[ext_resource path="res://Elements/Bones/Right_foot.tscn" type="PackedScene" id=41]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 3 )
@@ -30,7 +68,7 @@ margin_left = 320.0
 margin_top = 33.0
 margin_right = 436.0
 margin_bottom = 102.0
-text = "1"
+text = "0"
 
 [node name="Mistakes" type="TextEdit" parent="."]
 margin_left = 321.0
@@ -66,6 +104,154 @@ text = "Print result"
 position = Vector2( 199, 422 )
 texture = ExtResource( 2 )
 
+[node name="Collection" type="Spatial" parent="."]
+
+[node name="Bones" type="Spatial" parent="Collection"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.39462, 0.183542 )
+
+[node name="Skull" parent="Collection/Bones" instance=ExtResource( 38 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+id = 1
+
+[node name="Mandible" parent="Collection/Bones" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+id = 2
+
+[node name="Spine" parent="Collection/Bones" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+id = 3
+
+[node name="Pelvis" parent="Collection/Bones" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+id = 4
+
+[node name="Sternum" parent="Collection/Bones" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+id = 5
+
+[node name="Right_ribs" parent="Collection/Bones" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+id = 6
+
+[node name="Left_ribs" parent="Collection/Bones" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+id = 7
+
+[node name="Right_clavicle" parent="Collection/Bones" instance=ExtResource( 33 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+id = 8
+
+[node name="Left_clavicle" parent="Collection/Bones" instance=ExtResource( 32 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+id = 9
+
+[node name="Right_scapula" parent="Collection/Bones" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+id = 10
+
+[node name="Left_scapula" parent="Collection/Bones" instance=ExtResource( 31 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+id = 11
+
+[node name="Right_humerus" parent="Collection/Bones" instance=ExtResource( 36 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+id = 12
+
+[node name="Left_humerus" parent="Collection/Bones" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+id = 13
+
+[node name="Right_ulna" parent="Collection/Bones" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+id = 14
+
+[node name="Left_ulna" parent="Collection/Bones" instance=ExtResource( 28 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+id = 15
+
+[node name="Right_radius" parent="Collection/Bones" instance=ExtResource( 27 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+id = 16
+
+[node name="Left_radius" parent="Collection/Bones" instance=ExtResource( 29 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+id = 17
+
+[node name="Right_hand" parent="Collection/Bones" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+id = 18
+
+[node name="Left_hand" parent="Collection/Bones" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+id = 19
+
+[node name="Right_femur" parent="Collection/Bones" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+id = 20
+
+[node name="Left_femur" parent="Collection/Bones" instance=ExtResource( 34 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+id = 21
+
+[node name="Right_patella" parent="Collection/Bones" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+id = 22
+
+[node name="Left_patella" parent="Collection/Bones" instance=ExtResource( 30 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+id = 23
+
+[node name="Right_tibia" parent="Collection/Bones" instance=ExtResource( 35 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+id = 24
+
+[node name="Left_tibia" parent="Collection/Bones" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+id = 25
+
+[node name="Right_fibula" parent="Collection/Bones" instance=ExtResource( 40 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+id = 26
+
+[node name="Left_fibula" parent="Collection/Bones" instance=ExtResource( 26 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+id = 27
+
+[node name="Right_foot" parent="Collection/Bones" instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+id = 28
+
+[node name="Left_foot" parent="Collection/Bones" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+id = 29
+
+[node name="Silhouette" parent="Collection" instance=ExtResource( 37 )]
+transform = Transform( 0.85, 0, 0, 0, 0.85, 0, 0, 0, 0.85, 0, 0, -0.895187 )
+
+[node name="SuccessSound" type="AudioStreamPlayer" parent="Collection/Silhouette/Collisions" index="0"]
+script = ExtResource( 18 )
+samples = [ ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ) ]
+random_strategy = 2
+random_volume_range = 0
+random_pitch_range = 0
+
+[node name="CollisionShape" parent="Collection/Silhouette/Collisions/Left_humerus" index="0"]
+transform = Transform( 0.66678, -0.745255, 0, 0.745255, 0.66678, 0, 0, 0, 1, 0.0195186, -0.0744764, 0.0118507 )
+
+[node name="CollisionShape" parent="Collection/Silhouette/Collisions/Left_ulna" index="0"]
+transform = Transform( 0.524562, -0.712866, -0.465464, 0.814603, 0.579191, 0.0309895, 0.247501, -0.395424, 0.884524, 0.0219805, -0.0116134, -0.0185069 )
+
+[node name="CollisionShape" parent="Collection/Silhouette/Collisions/Left_femur" index="0"]
+transform = Transform( 0.987339, -0.158623, 0, 0.158198, 0.98469, 0.0732034, -0.0116118, -0.0722766, 0.997317, -0.00990111, -0.0126827, -0.0218817 )
+
+[node name="CollisionShape" parent="Collection/Silhouette/Collisions/Right_humerus" index="0"]
+transform = Transform( 0.730996, 0.682381, 0, -0.682381, 0.730996, 0, 0, 0, 1, -0.0398035, -0.0591612, -0.0094806 )
+
+[node name="CollisionShape" parent="Collection/Silhouette/Collisions/Right_tibia" index="0"]
+transform = Transform( 0.986233, 0.165207, 0.00721192, -0.161231, 0.970357, -0.180031, -0.0367406, 0.17639, 0.983634, 0.0559331, 0, -0.0639832 )
+
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]
+
+[editable path="Collection/Silhouette"]

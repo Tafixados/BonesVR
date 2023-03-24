@@ -58,8 +58,8 @@ func _on_Button_pressed() -> void:
 	# mark the features as required or optional.
 	webxr_interface.required_features = 'local-floor'
 	webxr_interface.optional_features = 'bounded-floor'
-	Singleton.reset_time()
-	$CanvasLayer.visible = false
+	Singleton.time = 0.0
+	
 	# This will return false if we're unable to even request the session,
 	# however, it can still fail asynchronously later in the process, so we
 	# only know if it's really succeeded or failed when our 
@@ -69,7 +69,7 @@ func _on_Button_pressed() -> void:
 		return
 
 func _webxr_session_started() -> void:
-	button.visible = false
+	$CanvasLayer.visible = false
 	# This tells Godot to start rendering to the headset.
 	get_viewport().arvr = true
 	# This will be the reference space type you ultimately got, out of the
@@ -78,10 +78,12 @@ func _webxr_session_started() -> void:
 	print ("Reference space type: " + webxr_interface.reference_space_type)
  
 func _webxr_session_ended() -> void:
-	button.visible = true
+	$CanvasLayer.visible = true
 	# If the user exits immersive mode, then we tell Godot to render to the web
 	# page again.
 	get_viewport().arvr = false
+	#When exiting ARVR, commit the session results to the LMS through SCORM API
+	Singleton.scorm.commit()
  
 func _webxr_session_failed(message: String) -> void:
 	OS.alert("Failed to initialize: " + message)

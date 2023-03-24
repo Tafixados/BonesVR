@@ -47,9 +47,11 @@ func set_time(time):
 	
 func seconds_to_scorm_time(seconds):
 	var hours = int(seconds / 3600)
+# warning-ignore:integer_division
 	var minutes = int((int(seconds) % 3600) / 60)
 	var sec = int(seconds) % 60  # Convert the seconds to an integer before applying the modulo operator
-	return "{:0>4}:{:0>2}:{:0>2}".format([hours, minutes, sec])
+	var time_string = "%02d:%02d:%02d" % [hours, minutes, sec]
+	return time_string
 
 #mode = [normal, browse]
 func get_mode():
@@ -60,6 +62,16 @@ func get_learner_name():
 	if Engine.has_singleton("JavaScript"):
 		return JavaScript.eval("pipwerks.SCORM.GetLearnerName()")
 
-#func submit_bone(id, mistakes, timeTaken):
-#	if Engine.has_singleton("JavaScript"):
-#		return JavaScript.eval("pipwerks.SCORM.SetQuestionScore(id, id, \"true-false\", \"true\", \"true\", \"correct\", mistakes, timeTaken)")
+func set_score_max():
+	if Engine.has_singleton("JavaScript"):
+		JavaScript.eval("pipwerks.SCORM.SetScoreMax(100)")
+
+func set_score_min():
+	if Engine.has_singleton("JavaScript"):
+		JavaScript.eval("pipwerks.SCORM.SetScoreMin(0)")
+
+#bone ID, true/false
+#correct, wrong, neutral 
+func set_bone(number, result, suspendstring):
+	if Engine.has_singleton("JavaScript"):
+		return JavaScript.eval("pipwerks.SCORM.setBone(" + str(number) + ", '" + result + "', '" + suspendstring + "')")

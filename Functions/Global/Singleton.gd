@@ -16,43 +16,51 @@ var GUI_panel
 var bones_placed = 0
 var scoreboard
 var time = 0.0
-var MistakesArray = []
+
 var total_mistakes = 0
+var braziers_used = 0
 
 var tentative_score = 0
 var final_score = 0
-var mode = ""
+
+var mode = "" 
 var success = "" #status = [passed, failed, unknown]
 var status = "" #status = [completed, incomplete, not attempted, browsed]
 
 var learner_name = ""
+var suspendstring
 
 func _ready():
 	add_child(scorm)
 	mode = scorm.get_mode() #either normal or browse I think
 	learner_name = scorm.get_learner_name()
-	for i in range(29):
-		MistakesArray.append(["Kaulas", 0])
+	#scorm.set_score_max()
+	#scorm.set_score_min()
 
 func bone_placed(body):
 	tentative_score += body.points
-	if bones_placed == 1:
-		reset_time()
-	bones_placed = bones_placed + 1
+	total_mistakes += body.mistakes
+	braziers_used += body.brazier_uses
+	bones_placed += 1
+	
+	suspendstring = "Viso: " + str(bones_placed) + "/29; Klaidų: " + str(total_mistakes) + "; Pagalbos: " + str(braziers_used) + "; Laikas: " + scorm.seconds_to_scorm_time(time)
+	
+	var result = ""
+	match (body.points):
+		3:
+			result = "correct"
+		0:
+			result = "wrong"
+		_:
+			result = "neutral"
+	
+	scorm.set_bone(body.id, result, suspendstring)
+	
 	calculate_score()
 	GUI_panel.update_label()
 	if bones_placed >= 29:
-		calculate_mistakes()
 		scoreboard.show_score()
-	else:
-		update_mistakes()
-
-func calculate_mistakes():
-	for row in MistakesArray:
-		total_mistakes += row[1]
-
-func update_mistakes():
-	scoreboard.show_mistakes()
+		scorm.commit()
 
 func _process(delta):
 	time += delta
@@ -60,26 +68,19 @@ func _process(delta):
 func get_time():
 	return time
 
-func reset_time():
-	time = 0.0
-
 func reset_all():
 	bones_placed = 0
-	reset_time()
-	for row in MistakesArray:
-		row[1] = 0
+	time = 0.0
+	total_mistakes = 0
+	braziers_used = 0
+	tentative_score = 0
+	final_score = 0
 
 func set_status():
 	if mode == "browse":
 		status = "browsed"
 	else:
-		match bones_placed:
-			0:
-				status = "not attempted"
-			29:
-				status = "completed"
-			_:
-				status = "incomplete"
+		status = "completed"
 	scorm.set_status(status)
 
 func set_success():
@@ -91,10 +92,10 @@ func set_success():
 		scorm.set_success(success)
 
 func calculate_score():
-	final_score = clamp(tentative_score * 100 / 87, 0, 100)
 	set_success()
 	set_status()
-	scorm.set_score(final_score)
-	scorm.commit()
+	if mode != "browse":
+		final_score = clamp(tentative_score * 100 / 87, 0, 100)
+		scorm.set_score(final_score)
 
 

@@ -6,10 +6,19 @@ onready var textbox1 = $BoneID
 onready var textbox2 = $Mistakes
 onready var textbox3 = $Score
 
+onready var object = [$Collection/Bones/Skull, $Collection/Bones/Mandible, $Collection/Bones/Spine, $Collection/Bones/Pelvis, $Collection/Bones/Sternum]
+
+
+func _ready():
+	label.text = "Prisijungė: " #+ Singleton.learner_name 
 
 func _on_Button_pressed():
-	Singleton.bone_placed(3)
-	#updateLabel()
+	object[int(textbox1.text)].points = int(textbox2.text)
+	object[int(textbox1.text)].brazier_uses += 1
+	Singleton.bone_placed(object[int(textbox1.text)])
+	label.text = Singleton.suspendstring
+	Singleton.scorm.set_time(Singleton.time)
+	Singleton.scorm.commit()
 
 func updateLabel():
 	var score = str(Singleton.scorm.get_score())
@@ -17,13 +26,8 @@ func updateLabel():
 	
 
 func _on_Button2_pressed():
-	var score = int(textbox3.text)
-	if score > 20:
-		score = score - 20
-	else:
-		score = 0
-	textbox3.text = str(score)
-	textbox2.text = str(int(textbox2.text) + 1)
+	label.text = Singleton.scorm.seconds_to_scorm_time(Singleton.time)
+	#updateLabel()
 
 
 func _on_Button3_pressed():
