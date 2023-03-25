@@ -1,15 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/audio/brazier.ogg" type="AudioStream" id=1]
-
-[sub_resource type="SpatialMaterial" id=1]
-flags_unshaded = true
-vertex_color_use_as_albedo = true
-params_blend_mode = 1
-params_billboard_mode = 3
-particles_anim_h_frames = 1
-particles_anim_v_frames = 1
-particles_anim_loop = false
+[ext_resource path="res://Elements/Objects/FireMaterial.tres" type="Material" id=2]
+[ext_resource path="res://Elements/Objects/Flame.gd" type="Script" id=3]
 
 [sub_resource type="QuadMesh" id=2]
 
@@ -21,10 +14,11 @@ offsets = PoolRealArray( 0, 0.987578 )
 colors = PoolColorArray( 0.99395, 1, 0.761719, 1, 0.961914, 0.280688, 0.078907, 1 )
 
 [node name="Flame" type="Spatial"]
+script = ExtResource( 3 )
 
 [node name="Fire" type="CPUParticles" parent="."]
 transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.00160992, -0.00737774, -0.00244594 )
-material_override = SubResource( 1 )
+material_override = ExtResource( 2 )
 amount = 16
 lifetime = 0.8
 speed_scale = 0.6

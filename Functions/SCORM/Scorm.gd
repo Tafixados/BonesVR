@@ -40,18 +40,14 @@ func commit():
 	if Engine.has_singleton("JavaScript"):
 		return JavaScript.eval("pipwerks.SCORM.data.save()")
 
-func set_time(time):
-	var scorm_time = seconds_to_scorm_time(time)
+func set_time(time): #time in milliseconds as INT
+	var scorm_time = convert_time(time)
 	if Engine.has_singleton("JavaScript"):
 		return JavaScript.eval("pipwerks.SCORM.SetSessionTime('" + scorm_time + "')")
 	
-func seconds_to_scorm_time(seconds):
-	var hours = int(seconds / 3600)
-# warning-ignore:integer_division
-	var minutes = int((int(seconds) % 3600) / 60)
-	var sec = int(seconds) % 60  # Convert the seconds to an integer before applying the modulo operator
-	var time_string = "%02d:%02d:%02d" % [hours, minutes, sec]
-	return time_string
+func convert_time(time): #time in milliseconds as INT
+	if Engine.has_singleton("JavaScript"):
+		return JavaScript.eval("pipwerks.UTILS.convertTotalMiliSeconds(" + str(time) + ")")
 
 #mode = [normal, browse]
 func get_mode():
@@ -62,13 +58,13 @@ func get_learner_name():
 	if Engine.has_singleton("JavaScript"):
 		return JavaScript.eval("pipwerks.SCORM.GetLearnerName()")
 
-func set_score_max():
+func set_score_max(maxscore):
 	if Engine.has_singleton("JavaScript"):
-		JavaScript.eval("pipwerks.SCORM.SetScoreMax(100)")
+		JavaScript.eval("pipwerks.SCORM.SetScoreMax(" + str(maxscore) + ")")
 
-func set_score_min():
+func set_score_min(minscore):
 	if Engine.has_singleton("JavaScript"):
-		JavaScript.eval("pipwerks.SCORM.SetScoreMin(0)")
+		JavaScript.eval("pipwerks.SCORM.SetScoreMin(" + str(minscore) + ")")
 
 #bone ID, true/false
 #correct, wrong, neutral 

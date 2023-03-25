@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Elements/GUI_panel.gd" type="Script" id=1]
+[ext_resource path="res://assets/audio/fanfare.mp3" type="AudioStream" id=2]
 [ext_resource path="res://Fonts/BAHNSCHRIFT.TTF" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=35]
@@ -31,5 +32,7 @@ autowrap = true
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.49354, 0 )
-modulate = Color( 0, 1, 0.156863, 1 )
 texture = SubResource( 33 )
+
+[node name="VictorySound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )

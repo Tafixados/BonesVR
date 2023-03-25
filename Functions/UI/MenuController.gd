@@ -38,11 +38,11 @@ func _on_InfoButton_pressed():
 		player.play("ShowSkele")
 	infoshown = !infoshown
 
-func _on_AudioSlider_value_changed(value):
-	if (value == -10):
+func _on_MusicSlider_value_changed(value):
+	bgm.volume_db = value
+	if (value == -30):
 		bgm.stream_paused = true
 	else:
-		bgm.volume_db = value*3
 		bgm.stream_paused = false
 
 
@@ -68,3 +68,7 @@ func _on_InfoButton_mouse_entered():
 	else:
 		player.play("ShowSkele")
 	infoshown = !infoshown
+
+
+func _on_AudioSlider_value_changed(value):
+	Singleton.sound_volume = value

@@ -16,6 +16,8 @@ func _on_Walls_body_entered(body):
 		audio_player.stream = preload("res://assets/audio/mistake.mp3")
 		# Connect the finished signal of the audio player to a function that deletes the child node
 		audio_player.connect("finished", self, "_on_audio_finished", [audio_player])
+		# Change the volume
+		audio_player.volume_db = Singleton.sound_volume
 		# Start playing the audio
 		audio_player.play()
 		

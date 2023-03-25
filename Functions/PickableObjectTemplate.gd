@@ -16,13 +16,14 @@ var bone_name = "Kaulas"
 var title = "(lot. ossa)"
 var description = "Paskirtis"
 var image = ""
-var points = 3
+var points
 var mistakes = 0
 var brazier_uses = 0
 
 #var model
 
 func _ready():
+	points = Singleton.MAXBONEPOINTS #Set the points to 3
 	bone_name = BoneInfo.get_value(str(id), "Name")
 	title = BoneInfo.get_value(str(id), "Title")
 	description = BoneInfo.get_value(str(id), "Description")

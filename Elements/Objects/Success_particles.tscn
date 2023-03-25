@@ -1,0 +1,93 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://particles/bone.png" type="Texture" id=1]
+[ext_resource path="res://particles/star.png" type="Texture" id=2]
+[ext_resource path="res://Elements/Objects/Success_particles.gd" type="Script" id=3]
+[ext_resource path="res://addons/randomAudioStreamPlayer/random_audio_stream_player.gd" type="Script" id=4]
+[ext_resource path="res://assets/audio/skel1.ogg" type="AudioStream" id=5]
+[ext_resource path="res://assets/audio/skel2.ogg" type="AudioStream" id=6]
+[ext_resource path="res://assets/audio/skel3.ogg" type="AudioStream" id=7]
+[ext_resource path="res://assets/audio/skel4.ogg" type="AudioStream" id=8]
+[ext_resource path="res://assets/audio/skel5.ogg" type="AudioStream" id=9]
+[ext_resource path="res://assets/audio/skel6.ogg" type="AudioStream" id=10]
+[ext_resource path="res://assets/audio/skel7.ogg" type="AudioStream" id=11]
+
+[sub_resource type="SpatialMaterial" id=1]
+flags_unshaded = true
+vertex_color_use_as_albedo = true
+params_blend_mode = 1
+params_billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+albedo_texture = ExtResource( 1 )
+
+[sub_resource type="QuadMesh" id=2]
+
+[sub_resource type="SpatialMaterial" id=3]
+flags_unshaded = true
+vertex_color_use_as_albedo = true
+params_blend_mode = 1
+params_billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+albedo_texture = ExtResource( 2 )
+
+[node name="Success_particles" type="Spatial"]
+transform = Transform( 0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0 )
+script = ExtResource( 3 )
+
+[node name="Bones" type="CPUParticles" parent="."]
+material_override = SubResource( 1 )
+emitting = false
+amount = 12
+lifetime = 1.5
+one_shot = true
+explosiveness = 1.0
+lifetime_randomness = 0.5
+mesh = SubResource( 2 )
+direction = Vector3( 0, 1, 0 )
+gravity = Vector3( 0, -4, 0 )
+initial_velocity = 5.0
+initial_velocity_random = 0.5
+angular_velocity = 360.0
+angular_velocity_random = 1.0
+angle_random = 1.0
+scale_amount = 0.3
+scale_amount_random = 0.3
+color = Color( 0.745098, 0.745098, 0.745098, 1 )
+
+[node name="Stars" type="CPUParticles" parent="."]
+material_override = SubResource( 3 )
+emitting = false
+amount = 12
+lifetime = 1.5
+one_shot = true
+explosiveness = 1.0
+lifetime_randomness = 0.5
+mesh = SubResource( 2 )
+direction = Vector3( 0, 1, 0 )
+gravity = Vector3( 0, -4, 0 )
+initial_velocity = 5.0
+initial_velocity_random = 0.5
+angular_velocity = 360.0
+angular_velocity_random = 1.0
+angle_random = 1.0
+scale_amount = 0.3
+scale_amount_random = 0.3
+color = Color( 0.819608, 0.823529, 0.294118, 1 )
+
+[node name="SuccessSound" type="AudioStreamPlayer" parent="."]
+script = ExtResource( 4 )
+samples = [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ]
+random_strategy = 2
+random_volume_range = 0
+random_pitch_range = 0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

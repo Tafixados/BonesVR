@@ -1,6 +1,5 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=31 format=2]
 
-[ext_resource path="res://addons/randomAudioStreamPlayer/random_audio_stream_player.gd" type="Script" id=1]
 [ext_resource path="res://Elements/Bones/Left_foot.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Elements/Bones/Left_tibia.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Elements/Bones/Right_scapula.tscn" type="PackedScene" id=4]
@@ -31,13 +30,6 @@
 [ext_resource path="res://Elements/Bones/Left_scapula.tscn" type="PackedScene" id=29]
 [ext_resource path="res://Elements/Bones/Right_radius.tscn" type="PackedScene" id=30]
 [ext_resource path="res://Elements/Bones/Left_fibula.tscn" type="PackedScene" id=31]
-[ext_resource path="res://assets/audio/skel1.ogg" type="AudioStream" id=32]
-[ext_resource path="res://assets/audio/skel2.ogg" type="AudioStream" id=33]
-[ext_resource path="res://assets/audio/skel3.ogg" type="AudioStream" id=34]
-[ext_resource path="res://assets/audio/skel4.ogg" type="AudioStream" id=35]
-[ext_resource path="res://assets/audio/skel5.ogg" type="AudioStream" id=36]
-[ext_resource path="res://assets/audio/skel6.ogg" type="AudioStream" id=37]
-[ext_resource path="res://assets/audio/skel7.ogg" type="AudioStream" id=38]
 
 [node name="Collection" type="Spatial"]
 
@@ -162,13 +154,6 @@ id = 29
 
 [node name="Silhouette" parent="." instance=ExtResource( 28 )]
 transform = Transform( 0.85, 0, 0, 0, 0.85, 0, 0, 0, 0.85, 0, 0, -0.895187 )
-
-[node name="SuccessSound" type="AudioStreamPlayer" parent="Silhouette/Collisions" index="0"]
-script = ExtResource( 1 )
-samples = [ ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ) ]
-random_strategy = 2
-random_volume_range = 0
-random_pitch_range = 0
 
 [node name="CollisionShape" parent="Silhouette/Collisions/Left_humerus" index="0"]
 transform = Transform( 0.66678, -0.745255, 0, 0.745255, 0.66678, 0, 0, 0, 1, 0.0195186, -0.0744764, 0.0118507 )
