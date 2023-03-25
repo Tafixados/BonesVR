@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Fonts/OpenSans-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/Fonts/OpenSans-Regular.ttf" type="DynamicFontData" id=1]
 
 [sub_resource type="DynamicFont" id=34]
 size = 80

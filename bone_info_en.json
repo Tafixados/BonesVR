@@ -1,0 +1,182 @@
+{
+	"1":{
+		"Name": "Skull",
+		"Title": "(latin - cranium)",
+		"Description": "A set of several intergrown bones that form the upper part of the axial skeleton. The purpose of the cranial bones is to protect the brain from injuries. The skull also contains the organs of hearing, smell, and vision.",
+		"Image": "res://assets/atlas_pages/cranium_mandible.png"
+	},
+	"2":{
+		"Name": "Mandible",
+		"Title": "(latin - mandibula)",
+		"Description": "A large, unpaired, immovable bone that forms the lower part of the facial skeleton. It participates in mastication and articulated speech when moving.",
+		"Image": "res://assets/atlas_pages/cranium_mandible.png"
+	},
+	"3":{
+		"Name": "Spine",
+		"Title": "(latin - columna vertebralis)",
+		"Description": "A support axis made up of 33-34 vertebrae. The spine protects the spinal cord and supports the head. The rib cage and pelvic bones connect to the spine.",
+		"Image": "res://assets/atlas_pages/spine.png"
+	},
+	"4":{
+		"Name": "Pelvic bone",
+		"Title": "(latin - pelvis)",
+		"Description": "A bone located at the support point of the spine. The pelvis connects part of the hip sockets. It consists of the sacrum, coccyx, and two hip bones, each of which is made up of the ilium, ischium, and pubis.",
+		"Image": "res://assets/atlas_pages/pelvis.png"
+	},
+	"5":{
+		"Name": "Sternum",
+		"Title": "(latin - sternum)",
+		"Description": "A flat bone located on the front wall of the thoracic cavity and belonging to the axial skeleton. This bone narrows downwards and is traditionally described as a sword.",
+		"Image": "res://assets/atlas_pages/ribs_sternum.png"
+	},
+	"6":{
+		"Name": "Right ribs",
+		"Title": "(latin - costae)",
+		"Description": "Bones of the thoracic cavity. There are 12 pairs (or 24 bones). The ribs form joints with the thoracic vertebrae. Raised by muscles, they increase the volume of the chest and help to inhale; conversely, other muscles lower the ribs and help exhale.",
+		"Image": "res://assets/atlas_pages/ribs_sternum.png"
+	},
+	"7":{
+		"Name": "Left ribs",
+		"Title": "(latin - costae)",
+		"Description": "Bones of the thoracic cavity. There are 12 pairs (or 24 bones). The ribs form joints with the thoracic vertebrae. Raised by muscles, they increase the volume of the chest and help to inhale; conversely, other muscles lower the ribs and help exhale.",
+		"Image": "res://assets/atlas_pages/ribs_sternum.png"
+	},
+	"8":{
+		"Name": "Right clavicle",
+		"Title": "(latin - clavicula)",
+		"Description": "A long, stretched S-shaped bone. The bone is easily palpable almost throughout its entire length among soft tissues at the border between the neck and chest.",
+		"Image": "res://assets/atlas_pages/clavicle.png"
+	},
+	"9":{
+		"Name": "Left clavicle",
+		"Title": "(latin - clavicula)",
+		"Description": "A long, stretched S-shaped bone. The bone is easily palpable almost throughout its entire length among soft tissues at the border between the neck and chest.",
+		"Image": "res://assets/atlas_pages/clavicle.png"
+	},
+	"10":{
+		"Name": "Right scapula",
+		"Title": "(latin - scapula)",
+		"Description": "A paired flat bone of the shoulder girdle, located on the posterior side of the shoulder girdle.",
+		"Image": "res://assets/atlas_pages/scapula.png"
+	},
+	"11":{
+		"Name": "Left scapula",
+		"Title": "(latin - scapula)",
+		"Description": "A paired flat bone of the shoulder girdle, located on the posterior side of the shoulder girdle.",
+		"Image": "res://assets/atlas_pages/scapula.png"
+	},
+	"12":{
+		"Name": "Right humerus",
+		"Title": "(latin - humerus)",
+		"Description": "The long bone of the arms, part of the appendicular skeleton. The only bone of the upper arm.",
+		"Image": "res://assets/atlas_pages/humerus.png"
+	},
+	"13":{
+		"Name": "Left humerus",
+		"Title": "(latin - humerus)",
+		"Description": "The long bone of the arms, part of the appendicular skeleton. The only bone of the upper arm.",
+		"Image": "res://assets/atlas_pages/humerus.png"
+	},
+	"14":{
+		"Name": "Right ulna",
+		"Title": "(latin - ulna)",
+		"Description": "One of the two bones of the forearm. When the palms are pressed against the thighs, the forearm bones are crossed, and when the palms are turned forward, they are arranged parallel. Then the ulna is on the inner side of the forearm.",
+		"Image": "res://assets/atlas_pages/radius_ulna.png"
+	},
+	"15":{
+		"Name": "Left ulna",
+		"Title": "(latin - ulna)",
+		"Description": "One of the two bones of the forearm. When the palms are pressed against the thighs, the forearm bones are crossed, and when the palms are turned forward, they are arranged parallel. Then the ulna is on the inner side of the forearm.",
+		"Image": "res://assets/atlas_pages/radius_ulna.png"
+	},
+	"16":{
+		"Name": "Right radius ",
+		"Title": "(latin - radius)",
+		"Description": "With the palm turned forward, this forearm bone lies on the lateral side. It belongs to the category of long bones.",
+		"Image": "res://assets/atlas_pages/radius_ulna.png"
+	},
+	"17":{
+		"Name": "Left radius ",
+		"Title": "(latin - radius)",
+		"Description": "With the palm turned forward, this forearm bone lies on the lateral side. It belongs to the category of long bones.",
+		"Image": "res://assets/atlas_pages/radius_ulna.png"
+	},
+	"18":{
+		"Name": "Right carpal bones",
+		"Title": "(latin - ossa manus)",
+		"Description": "The hand skeleton consists of 27 bones. They are divided into carpal bones (ossa carpi), metacarpal bones (ossa metacarpi), and phalanges (ossa digitorum).",
+		"Image": "res://assets/atlas_pages/carpal.png"
+	},
+	"19":{
+		"Name": "Left carpal bones",
+		"Title": "(latin - ossa manus)",
+		"Description": "The hand skeleton consists of 27 bones. They are divided into carpal bones (ossa carpi), metacarpal bones (ossa metacarpi), and phalanges (ossa digitorum).",
+		"Image": "res://assets/atlas_pages/carpal.png"
+	},
+	"20":{
+		"Name": "Right femur",
+		"Title": "(latin - femur)",
+		"Description": "The femur is the largest of the long bones. It is the only bone of the thigh. The upper end, or head, attaches to the hip socket; the lower end ends in condyles, which are part of the knee joint. The patella is attached to it, ligamentally connected to the tibia.",
+		"Image": "res://assets/atlas_pages/femur.png"
+	},
+	"21":{
+		"Name": "Left femur",
+		"Title": "(latin - femur)",
+		"Description": "The femur is the largest of the long bones. It is the only bone of the thigh. The upper end, or head, attaches to the hip socket; the lower end ends in condyles, which are part of the knee joint. The patella is attached to it, ligamentally connected to the tibia.",
+		"Image": "res://assets/atlas_pages/femur.png"
+	},
+	"22":{
+		"Name": "Right patella",
+		"Title": "(latin - patella)",
+		"Description": "A strong bony plate, ligamentally connected to the tibia.",
+		"Image": "res://assets/atlas_pages/patella.png"
+	},
+	"23":{
+		"Name": "Left patella",
+		"Title": "(latin - patella)",
+		"Description": "A strong bony plate, ligamentally connected to the tibia.",
+		"Image": "res://assets/atlas_pages/patella.png"
+	},
+	"24":{
+		"Name": "Right tibia",
+		"Title": "(latin - tibia)",
+		"Description": "This is the stronger of the two shinbones.",
+		"Image": "res://assets/atlas_pages/tibia_fibula.png"
+	},
+	"25":{
+		"Name": "Left tibia",
+		"Title": "(latin - tibia)",
+		"Description": "This is the stronger of the two shinbones.",
+		"Image": "res://assets/atlas_pages/tibia_fibula.png"
+	},
+	"26":{
+		"Name": "Right fibula",
+		"Title": "(latin - fibula)",
+		"Description": "The second bone of the calf, lying to the side and slightly back from the tibia. It is a slender long bone.",
+		"Image": "res://assets/atlas_pages/tibia_fibula.png"
+	},
+	"27":{
+		"Name": "Left fibula",
+		"Title": "(latin - fibula)",
+		"Description": "The second bone of the calf, lying to the side and slightly back from the tibia. It is a slender long bone.",
+		"Image": "res://assets/atlas_pages/tibia_fibula.png"
+	},
+	"28":{
+		"Name": "Right tarsal bones",
+		"Title": "(latin - ossa pedis)",
+		"Description": "Comprised of fourteen phalanges (ossa digitorum pedis), five metatarsal bones (ossa metatarsi), and seven tarsal bones (ossa tarsi).",
+		"Image": "res://assets/atlas_pages/pedis.png"
+	},
+	"29":{
+		"Name": "Left tarsal bones",
+		"Title": "(latin - ossa pedis)",
+		"Description": "Comprised of fourteen phalanges (ossa digitorum pedis), five metatarsal bones (ossa metatarsi), and seven tarsal bones (ossa tarsi).",
+		"Image": "res://assets/atlas_pages/pedis.png"
+	},
+	"default":{
+		"Name": "Bone",
+		"Title": "(latin - ossa)",
+		"Description": "Description",
+		"Image": ""
+	}	
+}

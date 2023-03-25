@@ -3,10 +3,15 @@ extends Node
 #Add SCORM object as child to use SCORM commands
 onready var scorm = Scorm.new()
 
+#language settings
+var language = "lt"
+
 #Game objects relying on Singleton functions
 var GUI_panel
 var scoreboard
-var VR_controller
+signal switch_lang
+signal rumble
+
 
 #Constants
 #Max and Min scores for the SCO
@@ -103,4 +108,16 @@ func calculate_score():
 		scorm.set_score(final_score)
 
 func time_to_ruble():
-	VR_controller.time_to_rumble()
+	emit_signal("rumble")
+
+func change_language(lang):
+	language = lang #either "lt" or "en"
+	scoreboard.update_lang()
+	GUI_panel.update_lang()
+	emit_signal("switch_lang")
+
+func connect_controller(controller_node):
+	connect("rumble", controller_node, "time_to_rumble")
+
+func connect_bone(bone_node):
+	connect("switch_lang", bone_node, "parse_info")

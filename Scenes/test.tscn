@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Functions/SCORM/test.gd" type="Script" id=1]
 [ext_resource path="res://assets/atlas_pages/carpal.png" type="Texture" id=2]
-[ext_resource path="res://Fonts/BAHNSCHRIFT.TTF" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/Fonts/BAHNSCHRIFT.TTF" type="DynamicFontData" id=3]
 [ext_resource path="res://Elements/Bones/Left_tibia.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Elements/Bones/Spine.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Elements/Bones/Pelvis.tscn" type="PackedScene" id=6]

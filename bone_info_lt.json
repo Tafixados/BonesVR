@@ -2,42 +2,42 @@
 	"1":{
 		"Name": "Kaukolė, galvos griaučiai",
 		"Title": "(lot. cranium)",
-		"Description": "Keletas tarpusavyje suaugusių kaulų, sudarančių ašinio skeleto viršutinę dalį.",
+		"Description": "Keletas tarpusavyje suaugusių kaulų, sudarančių ašinio skeleto viršutinę dalį. Galvos griaučių paskirtis – apsaugoti galvos smegenis nuo pažeidimų. Kaukolėje taip pat yra klausos, uoslės ir regos organai.",
 		"Image": "res://assets/atlas_pages/cranium_mandible.png"
 	},
 	"2":{
 		"Name": "Apatinis žandikaulis",
 		"Title": "(lot. mandibula)",
-		"Description": "Stambus, neporinis, neorinis kaulas.",
+		"Description": "Stambus, neporinis, neorinis kaulas, sudarantis apatinės veido dalies griaučius. Judėdamas jis dalyvauja kramtyme ir artikuliuotoje kalboje.",
 		"Image": "res://assets/atlas_pages/cranium_mandible.png"
 	},
 	"3":{
 		"Name": "Stuburas",
-		"Title": "(angl. spine)",
-		"Description": "Atraminė ašis, sudaryta iš 33 - 34 slankstelių.",
+		"Title": "(lot. columna vertebralis)",
+		"Description": "Atraminė ašis, sudaryta iš 33 - 34 slankstelių. Stuburas apsaugo nugaros smegenis ir palaiko galvą. Su stuburu jungiasi krūtinės ląsta ir dubens kaulai.",
 		"Image": "res://assets/atlas_pages/spine.png"
 	},
 	"4":{
 		"Name": "Kaulinis dubuo",
-		"Title": "(angl. pelvis)",
-		"Description": "Kaulas, esantis stuburo atramos taške. Dubuo jungia dalį gūžduobių.",
+		"Title": "(lot. pelvis)",
+		"Description": "Kaulas, esantis stuburo atramos taške. Dubuo jungia dalį gūžduobių. Jį sudaro kryžkaulis, uodegikaulis ir du dubenkauliai, kurių kiekvienas sudarytas iš klubakaulio, sėdynkaulio ir gaktikaulio.",
 		"Image": "res://assets/atlas_pages/pelvis.png"
 	},
 	"5":{
 		"Name": "Krūtinkaulis",
 		"Title": "(lot. sternum)",
-		"Description": "Plokščiasis kaulas, esantis krūtinės ląstos priekinėje sienoje. Šis kaulas yra siaurėjantis į apačią ir tradiciškai aprašomas kaip kardas.",
+		"Description": "Plokščiasis kaulas, esantis krūtinės ląstos priekinėje sienoje ir priklausantis ašiniams griaučiams. Šis kaulas yra siaurėjantis į apačią ir tradiciškai aprašomas kaip kardas.",
 		"Image": "res://assets/atlas_pages/ribs_sternum.png"
 	},
 	"6":{
 		"Name": "Dešinieji šonkauliai",
-		"Title": "(angl. ribs, lot. costae)",
+		"Title": "(lot. costae)",
 		"Description": "Krūtinės ląstos kaulai. Yra 12 porų (arba 24 kaulai). Šonkauliai su krūtinės slanksteliais sudaro sąnarius. Raumenų pakeliami, jie padidina krūtinės tūrį ir padeda įkvėpti, ir priešingai, – kiti raumenys šonkaulius nuleidžia ir padeda iškvėpti.",
 		"Image": "res://assets/atlas_pages/ribs_sternum.png"
 	},
 	"7":{
 		"Name": "Kairieji šonkauliai",
-		"Title": "(angl. ribs, lot. costae)",
+		"Title": "(lot. costae)",
 		"Description": "Krūtinės ląstos kaulai. Yra 12 porų (arba 24 kaulai). Šonkauliai su krūtinės slanksteliais sudaro sąnarius. Raumenų pakeliami, jie padidina krūtinės tūrį ir padeda įkvėpti, ir priešingai, – kiti raumenys šonkaulius nuleidžia ir padeda iškvėpti.",
 		"Image": "res://assets/atlas_pages/ribs_sternum.png"
 	},
@@ -103,13 +103,13 @@
 	},
 	"18":{
 		"Name": "Dešiniosios plaštakos griaučiai",
-		"Title": "(angl. carpal bones)",
+		"Title": "(lot. ossa manus)",
 		"Description": "Plaštakos griaučius sudaro 27 kaulai. Jie skirstomi į riešakaulius (ossa carpi), delnakaulius (ossa metacarpi) ir pirštakaulius (ossa digitorum).",
 		"Image": "res://assets/atlas_pages/carpal.png"
 	},
 	"19":{
 		"Name": "Kairiosios plaštakos griaučiai",
-		"Title": "(angl. carpal bones)",
+		"Title": "(lot. ossa manus)",
 		"Description": "Plaštakos griaučius sudaro 27 kaulai. Jie skirstomi į riešakaulius (ossa carpi), delnakaulius (ossa metacarpi) ir pirštakaulius (ossa digitorum).",
 		"Image": "res://assets/atlas_pages/carpal.png"
 	},
@@ -164,19 +164,19 @@
 	"28":{
 		"Name": "Dešiniosios pėdos griaučiai",
 		"Title": "(lot. ossa pedis)",
-		"Description": "Sudaryta iš keturiolikos pirštakaulių (ossa digitorum pedis), penkių padikaulių (ossa metatarsi) ir septynių čiurnos kaulų (ossa tarsi)",
+		"Description": "Sudaryta iš keturiolikos pirštakaulių (ossa digitorum pedis), penkių padikaulių (ossa metatarsi) ir septynių čiurnos kaulų (ossa tarsi).",
 		"Image": "res://assets/atlas_pages/pedis.png"
 	},
 	"29":{
 		"Name": "Kairiosios pėdos griaučiai",
 		"Title": "(lot. ossa pedis)",
-		"Description": "Sudaryta iš keturiolikos pirštakaulių (ossa digitorum pedis), penkių padikaulių (ossa metatarsi) ir septynių čiurnos kaulų (ossa tarsi)",
+		"Description": "Sudaryta iš keturiolikos pirštakaulių (ossa digitorum pedis), penkių padikaulių (ossa metatarsi) ir septynių čiurnos kaulų (ossa tarsi).",
 		"Image": "res://assets/atlas_pages/pedis.png"
 	},
 	"default":{
 		"Name": "Kaulas",
 		"Title": "(lot. ossa)",
-		"Description": "Paskirtis",
+		"Description": "Aprašymas",
 		"Image": ""
 	}	
 }

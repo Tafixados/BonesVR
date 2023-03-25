@@ -24,15 +24,25 @@ var brazier_uses = 0
 
 func _ready():
 	points = Singleton.MAXBONEPOINTS #Set the points to 3
-	bone_name = BoneInfo.get_value(str(id), "Name")
-	title = BoneInfo.get_value(str(id), "Title")
-	description = BoneInfo.get_value(str(id), "Description")
-	image = BoneInfo.get_value(str(id), "Image")
-		
+	parse_info()
+	Singleton.connect_bone(self)
+	
 	original_collision_mask = collision_mask
 	original_collision_layer = collision_layer
 	original_global_position = global_transform.origin
 	set_timer()
+
+func parse_info():
+	if Singleton.language == "lt":
+		bone_name = BoneInfo.get_value_lt(str(id), "Name")
+		title = BoneInfo.get_value_lt(str(id), "Title")
+		description = BoneInfo.get_value_lt(str(id), "Description")
+		image = BoneInfo.get_value_lt(str(id), "Image")
+	else:
+		bone_name = BoneInfo.get_value_en(str(id), "Name")
+		title = BoneInfo.get_value_en(str(id), "Title")
+		description = BoneInfo.get_value_en(str(id), "Description")
+		image = BoneInfo.get_value_en(str(id), "Image")
 
 #Being picked up
 func pick_up(by):
