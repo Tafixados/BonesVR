@@ -87,6 +87,9 @@ func let_go(impulse = Vector3(0.0, 0.0, 0.0)):
 		#No longer picked up
 		picked_up_by = null
 
+func this_is_a_bone():
+	#this is just for scanner detection
+	pass
 
 # Since the game can't handle constantly simulating tons of rigidbodies
 # we revert it to a static body after a few seconds of being let go.

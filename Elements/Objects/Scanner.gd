@@ -1,5 +1,6 @@
 extends RigidBody
 
+#Scanner collision mask = 13
 #Remember the state so we can return it when the player drops the object
 onready var original_parent = get_parent()
 onready var raycast = $RayCast
@@ -29,7 +30,10 @@ func pick_up(by):
 	mode = RigidBody.MODE_STATIC
 	#collision_layer = 0
 	#collision_mask = 0
-	label.text = "Nuspauskite gaiduką, kad skenuoti kaulą"
+	if (Singleton.language == "lt"):
+		label.text = "Nuspauskite gaiduką, kad skenuoti kaulą"
+	else:
+		label.text = "Pull the trigger to scan a bone"
 	
 	#Reparent
 	original_parent.remove_child(self)
@@ -99,7 +103,10 @@ func _process(delta):
 	if is_gripped:
 		if raycast.is_colliding():
 			var scanned_object = raycast.get_collider()
-			if scanned_object.has_method('out_of_bounds'):
+			if scanned_object.has_method('this_is_a_bone'):
 				label.text = str(scanned_object.bone_name) + " " + str(scanned_object.title)
 		else:
-			label.text = "Nieko nerasta"
+			if (Singleton.language == "lt"):
+				label.text = "Nieko nerasta."
+			else:
+				label.text = "Nothing found."

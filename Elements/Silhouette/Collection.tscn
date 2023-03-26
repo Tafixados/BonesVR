@@ -38,122 +38,154 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.39462, 0.183542 )
 
 [node name="Skull" parent="Bones" instance=ExtResource( 26 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+collision_layer = 4097
 id = 1
 
 [node name="Mandible" parent="Bones" instance=ExtResource( 12 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+collision_layer = 4097
 id = 2
 
 [node name="Spine" parent="Bones" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+collision_layer = 4097
 id = 3
 
 [node name="Pelvis" parent="Bones" instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+collision_layer = 4097
 id = 4
 
 [node name="Sternum" parent="Bones" instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+collision_layer = 4097
 id = 5
 
 [node name="Right_ribs" parent="Bones" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+collision_layer = 4097
 id = 6
 
 [node name="Left_ribs" parent="Bones" instance=ExtResource( 19 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+collision_layer = 4097
 id = 7
 
 [node name="Right_clavicle" parent="Bones" instance=ExtResource( 21 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+collision_layer = 4097
 id = 8
 
 [node name="Left_clavicle" parent="Bones" instance=ExtResource( 24 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+collision_layer = 4097
 id = 9
 
 [node name="Right_scapula" parent="Bones" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+collision_layer = 4097
 id = 10
 
 [node name="Left_scapula" parent="Bones" instance=ExtResource( 29 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+collision_layer = 4097
 id = 11
 
 [node name="Right_humerus" parent="Bones" instance=ExtResource( 16 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+collision_layer = 4097
 id = 12
 
 [node name="Left_humerus" parent="Bones" instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+collision_layer = 4097
 id = 13
 
 [node name="Right_ulna" parent="Bones" instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+collision_layer = 4097
 id = 14
 
 [node name="Left_ulna" parent="Bones" instance=ExtResource( 20 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+collision_layer = 4097
 id = 15
 
 [node name="Right_radius" parent="Bones" instance=ExtResource( 30 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+collision_layer = 4097
 id = 16
 
 [node name="Left_radius" parent="Bones" instance=ExtResource( 17 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+collision_layer = 4097
 id = 17
 
 [node name="Right_hand" parent="Bones" instance=ExtResource( 14 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+collision_layer = 4097
 id = 18
 
 [node name="Left_hand" parent="Bones" instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+collision_layer = 4097
 id = 19
 
 [node name="Right_femur" parent="Bones" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+collision_layer = 4097
 id = 20
 
 [node name="Left_femur" parent="Bones" instance=ExtResource( 18 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+collision_layer = 4097
 id = 21
 
 [node name="Right_patella" parent="Bones" instance=ExtResource( 11 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+collision_layer = 4097
 id = 22
 
 [node name="Left_patella" parent="Bones" instance=ExtResource( 27 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+collision_layer = 4097
 id = 23
 
 [node name="Right_tibia" parent="Bones" instance=ExtResource( 23 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+collision_layer = 4097
 id = 24
 
 [node name="Left_tibia" parent="Bones" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+collision_layer = 4097
 id = 25
 
 [node name="Right_fibula" parent="Bones" instance=ExtResource( 22 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+collision_layer = 4097
 id = 26
 
 [node name="Left_fibula" parent="Bones" instance=ExtResource( 31 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+collision_layer = 4097
 id = 27
 
 [node name="Right_foot" parent="Bones" instance=ExtResource( 25 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+collision_layer = 4097
 id = 28
 
 [node name="Left_foot" parent="Bones" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23661 )
+collision_layer = 4097
 id = 29
 
 [node name="Silhouette" parent="." instance=ExtResource( 28 )]
-transform = Transform( 0.85, 0, 0, 0, 0.85, 0, 0, 0, 0.85, 0, 0, -0.895187 )
+transform = Transform( 0.85, 0, 0, 0, 0.85, 0, 0, 0, 0.85, 0, 0.0632826, -0.895187 )
+
+[node name="lowman_shoes" parent="Silhouette/human3" index="0"]
+layers = 4
 
 [node name="CollisionShape" parent="Silhouette/Collisions/Left_humerus" index="0"]
 transform = Transform( 0.66678, -0.745255, 0, 0.745255, 0.66678, 0, 0, 0, 1, 0.0195186, -0.0744764, 0.0118507 )

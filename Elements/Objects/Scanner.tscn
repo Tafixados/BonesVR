@@ -66,7 +66,7 @@ shape = SubResource( 4 )
 transform = Transform( -1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0.00169535, 0.0957285, -0.172284 )
 enabled = true
 cast_to = Vector3( 0, 0, 2 )
-collision_mask = 3
+collision_mask = 4096
 
 [node name="RaycastSprite" type="Sprite3D" parent="RayCast"]
 transform = Transform( -1.31134e-09, 0, -0.03, 0, 0.03, 0, 0.03, 0, -1.31134e-09, 1.97906e-09, -0.0309309, -0.0307303 )

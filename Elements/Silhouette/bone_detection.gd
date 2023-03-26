@@ -4,6 +4,7 @@ const partices_sound = preload("res://Elements/Objects/Success_particles.tscn")
 var effect
 export var detect = ""
 
+
 func _ready():
 	connect("body_entered", self, "_on_body_entered")
 
@@ -16,6 +17,7 @@ func _on_body_entered(body):
 	if body.get_name() == detect:
 		$model.set_visible(true)
 		Singleton.bone_placed(body)
+		$StaticBody.this_is_a_bone(body)
 		create_effect()
 		body.queue_free()
 		

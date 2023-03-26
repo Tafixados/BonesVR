@@ -16,7 +16,7 @@ func create_flame_effect():
 
 
 func _on_Area_body_entered(body):
-	if body.has_method('out_of_bounds'):
+	if body.has_method('this_is_a_bone'):
 		if previous_body != body:
 			body.brazier_uses += 1
 			create_flame_effect()

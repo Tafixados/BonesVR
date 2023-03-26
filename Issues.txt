@@ -1,18 +1,18 @@
 Transparency sorting
-Due to godot engine VR rendering engine limitations, transparent materials are draws after opaque materials, and are sorted back-to-front before being drawn based on the Node3D position.
-Due to this, overlapping objects may often be sorted out of order, and may have a not intended visual afterimage effect.
-The only way to solve this issue is to reprogram the entire godot rendering engine or avoid using transparent objects entirely.
-https://docs.godotengine.org/en/stable/tutorials/3d/3d_rendering_limitations.html#transparency-sorting
+SOLVED: Due to godot engine VR rendering engine limitations, transparent materials are draws after opaque materials, and are sorted back-to-front before being drawn based on the Node3D position.
+	Due to this, overlapping objects may often be sorted out of order, and may have a not intended visual afterimage effect.
+	The only way to solve this issue is to reprogram the entire godot rendering engine or avoid using transparent objects entirely.
+	https://docs.godotengine.org/en/stable/tutorials/3d/3d_rendering_limitations.html#transparency-sorting
 
-Some imported 3d models do not render at all in VR, while looking fine in the editor. Unsure how to fix the issue, so just had to look for different models that worked.
+SOLVED?: Some imported 3d models do not render at all in VR, while looking fine in the editor. Unsure how to fix the issue, so just had to look for different models that worked.
 
-Fire particle textures are not rendering for some reason, leaving the particles looking like basic squares.
+SOLVED: Fire particle textures are not rendering for some reason, leaving the particles looking like basic squares.
 
-Brazier GUI should also display images, though unsure what the problem currently is.
+SOLVED: Brazier GUI should also display images, though unsure what the problem currently is.
 
-Timer doesn't display correct time. Need more tests, maybe the math is wrong somehow, or I don't understand how it works.
+SOLVED: Timer doesn't display correct time. Need more tests, maybe the math is wrong somehow, or I don't understand how it works.
 
-Door models are not lit properly.
+SOLVED: Door models are not lit properly.
 
 Controller models are jank af and the texture's borked. Temporary fix by making them pure black to hide everything until i get more appropriate models.
 
@@ -24,5 +24,5 @@ Sometimes the sprite3d loses track of the viewport target and doesn't show anyth
 
 Couldn't make the scanner light scale with the distance from the scanner to the scanned object, so it's left as a constant for now.
 
-Still can't make a javascript shell for scorm api - this is out of my league. Since there are no step-by-step tutorials, the only option is to learn everything inside-out for something that should only take 10 minutes to set up and forget about.
+SOLVED: Still can't make a javascript shell for scorm api - this is out of my league. Since there are no step-by-step tutorials, the only option is to learn everything inside-out for something that should only take 10 minutes to set up and forget about. (Note from future me: I know that feel bro, shit sucked ass)
 
