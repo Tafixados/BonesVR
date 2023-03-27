@@ -79,8 +79,7 @@ func _ready():
 func gripped():
 	raycast_sprite.set_visible(true)
 	is_gripped = true
-	
-	
+
 func released():
 	is_gripped = false
 	raycast_sprite.set_visible(false)
@@ -105,8 +104,23 @@ func _process(delta):
 			var scanned_object = raycast.get_collider()
 			if scanned_object.has_method('this_is_a_bone'):
 				label.text = str(scanned_object.bone_name) + " " + str(scanned_object.title)
+				scanned_object.change_color()
+				#stretch_sprite_to_scanned_object(scanned_object)
 		else:
+			#reset_stretch()
 			if (Singleton.language == "lt"):
 				label.text = "Nieko nerasta."
 			else:
 				label.text = "Nothing found."
+
+#func stretch_sprite_to_scanned_object(scanned_object):
+	# Calculate the distance between the RayCast and the scanned_object
+	#var distance = raycast.global_transform.origin.distance_to(scanned_object.global_transform.origin)
+	# Scale the Sprite3D in the X axis according to the calculated distance
+	#raycast_sprite.scale.x = distance
+	# Update the Sprite3D's position to be in the middle between the RayCast and the scanned_object
+	#raycast_sprite.global_transform.origin = raycast.global_transform.origin.linear_interpolate(scanned_object.global_transform.origin, 0.5)
+	
+#func reset_stretch():
+	#raycast_sprite.scale.x = 1
+	#raycast_sprite.global_transform.origin = Vector3(0,0,0)

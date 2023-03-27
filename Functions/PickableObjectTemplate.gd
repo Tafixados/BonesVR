@@ -21,11 +21,14 @@ var mistakes = 0
 var brazier_uses = 0
 
 #var model
+onready var material = $CollisionShape/model/mesh.get_active_material(0)
+onready var color_timer = $Timer
 
 func _ready():
 	points = Singleton.MAXBONEPOINTS #Set the points to 3
 	parse_info()
 	Singleton.connect_bone(self)
+	color_timer.connect("timeout",self,"return_colour")
 	
 	original_collision_mask = collision_mask
 	original_collision_layer = collision_layer
@@ -109,3 +112,13 @@ func out_of_bounds():
 	global_transform.origin = original_global_position
 	if points > 0:
 		points -= 1
+
+func change_color():
+	material.albedo_color = Color(0, 0.5, 1, 1)
+	#material.roughness = 0.0
+	color_timer.wait_time = 0.1
+	color_timer.start()
+
+func return_colour():
+	material.albedo_color = Color(1, 1, 1, 1)
+	#material.roughness = 0.91

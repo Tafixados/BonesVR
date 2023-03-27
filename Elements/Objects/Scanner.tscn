@@ -68,9 +68,11 @@ enabled = true
 cast_to = Vector3( 0, 0, 2 )
 collision_mask = 4096
 
-[node name="RaycastSprite" type="Sprite3D" parent="RayCast"]
-transform = Transform( -1.31134e-09, 0, -0.03, 0, 0.03, 0, 0.03, 0, -1.31134e-09, 1.97906e-09, -0.0309309, -0.0307303 )
+[node name="RaycastSprite" type="Spatial" parent="RayCast"]
 visible = false
+
+[node name="Sprite3D" type="Sprite3D" parent="RayCast/RaycastSprite"]
+transform = Transform( -1.31134e-09, 0, -0.03, 0, 0.03, 0, 0.03, 0, -1.31134e-09, 1.86265e-09, -0.0309309, -0.0307303 )
 centered = false
 pixel_size = 2.0
 texture = SubResource( 7 )
