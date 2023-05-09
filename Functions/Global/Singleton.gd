@@ -8,10 +8,11 @@ var language = "lt"
 
 #Game objects relying on Singleton functions
 var GUI_panel
+var UI_layer
 var scoreboard
 signal switch_lang
 signal rumble
-
+var reset_timer
 
 #Constants
 #Max and Min scores for the SCO
@@ -30,6 +31,9 @@ var braziers_used = 0
 var tentative_score = 0
 var final_score = 0
 var sound_volume = 0
+var music_volume = 0
+var can_make_mistakes = false
+var howtoplayed = false
 
 var mode = ""  #mode - [browse, normal, review] (read only)
 var success = "" #status = [passed, failed, unknown] (read write)
@@ -37,12 +41,14 @@ var status = "" #status = [completed, incomplete, not attempted, browsed] (idk d
 var learner_name = "" #student name we get from the LMS
 var suspendstring = "" #bonus content data we send (only one entry per session tho, so make it count)
 
+
 func _ready():
 	add_child(scorm)
 	mode = scorm.get_mode() #either normal or browse I think
 	learner_name = scorm.get_learner_name() #Surname, Name
 	scorm.set_score_max(MAXIMUMscore) 
 	scorm.set_score_min(MINIMUMscore)
+	#can_make_mistakes = true
 
 func bone_placed(body):
 	tentative_score += body.points
@@ -82,6 +88,22 @@ func reset_all():
 	braziers_used = 0
 	tentative_score = 0
 	final_score = 0
+	language = "lt"
+	can_make_mistakes = false
+	howtoplayed = false
+	set_timer()
+
+func set_timer():
+	reset_timer = Timer.new()
+	reset_timer.wait_time = 7
+	reset_timer.one_shot = true
+	reset_timer.connect("timeout",self,"turn_off_ui")
+	add_child(reset_timer)
+	reset_timer.start()
+
+func turn_off_ui():
+	UI_layer.visible = false
+	can_make_mistakes = true
 
 func set_status():
 	if mode == "browse":
@@ -121,3 +143,17 @@ func connect_controller(controller_node):
 
 func connect_bone(bone_node):
 	connect("switch_lang", bone_node, "parse_info")
+
+func play_mistake_reaction():
+	GUI_panel.play_reminder()
+
+func scanner_pickup():
+	GUI_panel.play_scanner_pickup()
+
+func next_music_track():
+	UI_layer.change_bgm_tracks()
+
+func howto():
+	if (!howtoplayed):
+		GUI_panel.play_howto()
+		howtoplayed = true

@@ -68,22 +68,30 @@ func _on_Button_pressed() -> void:
 		OS.alert("Failed to initialize")
 		return
 
+func _input(event):
+	if event is InputEventKey:
+		if event.pressed and event.scancode == KEY_M:
+			_exit_vr()
+			$CanvasLayer.visible = true
+
 func _webxr_session_started() -> void:
-	$CanvasLayer.visible = false
 	# This tells Godot to start rendering to the headset.
 	get_viewport().arvr = true
+	$CanvasLayer.visible = false
+	Singleton.can_make_mistakes = true
 	# This will be the reference space type you ultimately got, out of the
 	# types that you requested above. This is useful if you want the game to
 	# work a little differently in 'bounded-floor' versus 'local-floor'.
 	print ("Reference space type: " + webxr_interface.reference_space_type)
  
 func _webxr_session_ended() -> void:
-	$CanvasLayer.visible = true
 	# If the user exits immersive mode, then we tell Godot to render to the web
 	# page again.
 	get_viewport().arvr = false
 	#When exiting ARVR, commit the session results to the LMS through SCORM API
 	Singleton.scorm.commit()
+	$CanvasLayer.visible = true
+	$CanvasLayer.update_scaling()
  
 func _webxr_session_failed(message: String) -> void:
 	OS.alert("Failed to initialize: " + message)
@@ -127,3 +135,7 @@ func _webxr_on_squeeze_start(controller_id: int) -> void:
  
 func _webxr_on_squeeze_end(controller_id: int) -> void:
 	print("Squeeze End: " + str(controller_id))
+	
+func _exit_vr() -> void:
+	if webxr_interface:
+		webxr_interface.end_session()

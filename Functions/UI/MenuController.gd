@@ -12,8 +12,10 @@ var timer
 var bgm1 = preload("res://assets/audio/bgm1.ogg")
 var bgm2 = preload("res://assets/audio/bgm2.ogg")
 var bgm3 = preload("res://assets/audio/bgm3.ogg")
+var bgm4 = preload("res://assets/audio/bgm4.ogg")
+var bgm5 = preload("res://assets/audio/bgm5.ogg")
 
-var bgmarray = [bgm1, bgm2, bgm3]
+var bgmarray = [bgm1, bgm4, bgm3, bgm2, bgm5]
 
 func _ready():
 	bgm.stream = bgmarray[current_bgm]
@@ -21,13 +23,14 @@ func _ready():
 
 func set_timer():
 	timer = Timer.new()
-	timer.wait_time = 5
+	timer.wait_time = 3
 	timer.one_shot = true
 	timer.connect("timeout",self,"start_playing")
 	add_child(timer)
 	timer.start()
 
 func start_playing():
+	bgm.volume_db = Singleton.music_volume
 	bgm.play()
 	timer.queue_free()
 
@@ -39,7 +42,8 @@ func _on_InfoButton_pressed():
 	infoshown = !infoshown
 
 func _on_MusicSlider_value_changed(value):
-	bgm.volume_db = value
+	Singleton.music_volume = value
+	bgm.volume_db = Singleton.music_volume
 	if (value == -30):
 		bgm.stream_paused = true
 	else:

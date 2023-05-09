@@ -20,7 +20,6 @@ func _on_Function_Pickup_body_exited(body):
 	if object_in_area.find(body) != -1:
 		object_in_area.erase(body)
 
-
 # Upper trigger = 0
 # Grip trigger = 1
 # X/A = 4
@@ -40,6 +39,10 @@ func _on_button_pressed(p_button):
 	elif p_button == 1:
 		if picked_up_object.has_method('gripped'):
 			picked_up_object.gripped()
+	elif p_button == 4:
+		Singleton.next_music_track()
+	elif p_button == 5:
+		Singleton.howto()
 
 func _on_button_released(p_button):
 	if p_button == 0:

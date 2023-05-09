@@ -17,12 +17,17 @@ var title_lt = preload("res://assets/UI/Title.png")
 var title_en = preload("res://assets/UI/Title_en.png")
 
 func _ready():
+	Singleton.UI_layer = self
+	#get_viewport().connect("size_changed", self, "update_scaling")
 	set_process(true)  # Enable process callback
 	label.text = "Prisijungė: " + Singleton.learner_name 
+	update_scaling()
 
 func _process(delta):
-	var screen_size = get_viewport().get_visible_rect().size
+	update_scaling()
 
+func update_scaling():
+	var screen_size = get_viewport().get_visible_rect().size
 	# Scale ColorRect
 	$UIPanel/ColorRect.rect_min_size = screen_size
 	$UIPanel.rect_min_size = screen_size
@@ -30,7 +35,6 @@ func _process(delta):
 	# Scale MarginContainer and its children
 	$UIPanel/MarginContainer.rect_min_size = screen_size
 	$UIPanel/MarginContainer.rect_scale = Vector2(screen_size.x / $UIPanel/MarginContainer.rect_size.x, screen_size.y / $UIPanel/MarginContainer.rect_size.y)
-
 
 func _on_LanguageButton_pressed():
 	switch_languages()
@@ -59,3 +63,7 @@ func switch_languages():
 		Singleton.change_language("en")
 	else:
 		Singleton.change_language("lt")
+
+#it's bad code, whatever. It works.
+func change_bgm_tracks():
+	$UIPanel/MarginContainer/VBoxContainer/HBox1/HBox2._on_Next_pressed()

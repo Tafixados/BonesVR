@@ -6,6 +6,7 @@ var original_collision_mask
 var original_collision_layer
 var original_global_position
 var timer
+var initial_timer
 
 #Who picked us up?
 var picked_up_by = null
@@ -20,11 +21,13 @@ var points
 var mistakes = 0
 var brazier_uses = 0
 
+
 #var model
 onready var material = $CollisionShape/model/mesh.get_active_material(0)
 onready var color_timer = $Timer
 
 func _ready():
+	mode = RigidBody.MODE_STATIC
 	points = Singleton.MAXBONEPOINTS #Set the points to 3
 	parse_info()
 	Singleton.connect_bone(self)
@@ -33,7 +36,8 @@ func _ready():
 	original_collision_mask = collision_mask
 	original_collision_layer = collision_layer
 	original_global_position = global_transform.origin
-	set_timer()
+
+	set_initial_timer()
 
 func parse_info():
 	if Singleton.language == "lt":
@@ -107,6 +111,18 @@ func set_timer():
 func turn_static():
 	mode = RigidBody.MODE_STATIC
 	timer.queue_free()
+
+func set_initial_timer():
+	initial_timer = Timer.new()
+	initial_timer.wait_time = 1
+	initial_timer.one_shot = true
+	initial_timer.connect("timeout",self,"turn_rigid")
+	add_child(initial_timer)
+	initial_timer.start()
+
+func turn_rigid():
+	mode = RigidBody.MODE_RIGID
+	set_timer()
 
 func out_of_bounds():
 	global_transform.origin = original_global_position

@@ -15,6 +15,9 @@ var is_gripped = false
 #Who picked us up?
 var picked_up_by = null
 
+var first_pickup = false
+
+
 #Being picked up
 func pick_up(by):
 	if picked_up_by == by:
@@ -43,6 +46,11 @@ func pick_up(by):
 	
 	#Reset our transform
 	transform = Transform()
+	
+	if (!first_pickup):
+		Singleton.scanner_pickup()
+		first_pickup = true
+	
 
 #Letting go
 func let_go(impulse = Vector3(0.0, 0.0, 0.0)):

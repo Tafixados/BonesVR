@@ -1,6 +1,8 @@
 extends Area
 var audio_player
 
+var first_mistake = false
+
 func _on_Walls_body_entered(body):
 	
 	if body.has_method('out_of_bounds'):
@@ -23,6 +25,10 @@ func _on_Walls_body_entered(body):
 		
 		#var sendmessage = "setAnswer(" + body.id + ",true,false,false);"
 		#JavaScript.eval(sendmessage)
+		
+		if (!first_mistake) and (Singleton.can_make_mistakes):
+			Singleton.play_mistake_reaction()
+			first_mistake = true
 
 func _on_audio_finished(audio_player):
 	# Delete the audio player child node using the queue_free() method

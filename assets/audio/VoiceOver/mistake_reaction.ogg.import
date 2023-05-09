@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/mistake_reaction.ogg-91806b883a7b7d3e930d4e3136f6fe26.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/VoiceOver/mistake_reaction.ogg"
+dest_files=[ "res://.import/mistake_reaction.ogg-91806b883a7b7d3e930d4e3136f6fe26.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

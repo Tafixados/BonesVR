@@ -1323,7 +1323,7 @@ colors = PoolColorArray( 0.99395, 1, 0.761719, 1, 0.961914, 0.280688, 0.078907, 
 extents = Vector3( 1.00926, 0.0876314, 0.687902 )
 
 [sub_resource type="BoxShape" id=2]
-extents = Vector3( 0.863535, 0.248298, 0.0323636 )
+extents = Vector3( 0.863535, 0.651545, 0.0323636 )
 
 [sub_resource type="BoxShape" id=3]
 extents = Vector3( 3.59923, 2.39486, 0.894801 )
@@ -1338,6 +1338,10 @@ extents = Vector3( 3.61075, 0.221862, 3.58728 )
 script = ExtResource( 3 )
 
 [node name="CanvasLayer" type="Control" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource( 23 )
 
 [node name="UIPanel" type="Control" parent="CanvasLayer"]
@@ -1708,13 +1712,13 @@ one_shot = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0598812, 0, 0 )
 
 [node name="GUI_panel" parent="Environment/Room/Sign" instance=ExtResource( 9 )]
-transform = Transform( -6.17491e-09, 0.0393942, -0.141266, 1.72198e-09, 0.141266, 0.0393942, 0.146656, 0, -6.41052e-09, 1.25037, 0.747291, 0.200994 )
+transform = Transform( -6.17491e-09, 0.0393942, -0.141266, 1.72198e-09, 0.141266, 0.0393942, 0.146656, 0, -6.41052e-09, 1.25037, 0.747291, 0.258239 )
 
 [node name="Post" parent="Environment/Room/Sign" instance=ExtResource( 44 )]
 transform = Transform( 0.04, 0, 0, 0, 1.31711, 0, 0, 0, 0.8, 1.36145, 0.929074, 0.234352 )
 
 [node name="Box" parent="Environment/Room/Sign/Post" index="0"]
-transform = Transform( 1, 0, 0, 0, 0.455641, 0, 0, 0, 1, 0, 0.398404, 0 )
+transform = Transform( 1, 0, 0, 0, 0.455642, 0, 0, 0, 1.27365, 0, 0.398404, 0.0563445 )
 
 [node name="paper" type="Spatial" parent="Environment/Room/Sign"]
 transform = Transform( -4.37114e-09, -0.1, 0, 0.0989566, -4.32553e-09, -0.014408, 0.014408, -6.29793e-10, 0.0989566, 1.33334, 1.72361, -0.21302 )
@@ -1742,7 +1746,7 @@ transform = Transform( 0.928691, 3.11692e-09, 0.370849, 3.11699e-09, 0.999999, -
 mesh = SubResource( 1 )
 
 [node name="Sprite3D" type="Sprite3D" parent="Environment/Room/Sign"]
-transform = Transform( 3.47999e-09, -5.25463e-16, 0.468311, -2.66823e-08, -0.176709, 6.16321e-21, 0.176709, -2.66823e-08, -4.54364e-08, 1.3233, 1.33371, -0.177878 )
+transform = Transform( 3.47999e-09, -5.25463e-16, 0.468311, -2.66823e-08, -0.176709, 6.16321e-21, 0.176709, -2.66823e-08, -4.54364e-08, 1.3233, 1.33371, -0.333293 )
 offset = Vector2( 250, 0 )
 texture = SubResource( 59 )
 
@@ -1895,9 +1899,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.201158, 0.166552 )
 shape = SubResource( 4 )
 
 [node name="coins1" parent="Environment/Room/Table" instance=ExtResource( 53 )]
-transform = Transform( 0.3, 0, -1.68754e-14, 0, 0.3, 0, 1.68754e-14, 0, 0.3, -0.780691, 0.295858, 0.615389 )
+transform = Transform( 0.3, 0, -1.68754e-14, 0, 0.3, 0, 1.68754e-14, 0, 0.3, -0.435654, 0.295858, 0.615389 )
 
 [node name="BoneGuard" type="Spatial" parent="Environment/Room"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.546694, 0 )
 
 [node name="Wall" type="StaticBody" parent="Environment/Room/BoneGuard"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.810313 )
@@ -2071,9 +2076,98 @@ transform = Transform( 0.5, 0, 0, 0, 1.25, 0, 0, 0, 0.75, 8.42562, -0.290668, -0
 [node name="Collection" parent="Environment" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000929832, 0.0324095, 0.238754 )
 
+[node name="Skull" parent="Environment/Collection/Bones" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.59498 )
+
+[node name="Mandible" parent="Environment/Collection/Bones" index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.11071 )
+
+[node name="Spine" parent="Environment/Collection/Bones" index="2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.385236, 0, -0.23661 )
+
+[node name="CollisionShape2" parent="Environment/Collection/Bones/Spine" index="0"]
+transform = Transform( 0.85, 0, 0, 0, 0.828782, -0.188736, 0, 0.188736, 0.828782, 0, 0.123891, -0.00470904 )
+
+[node name="Pelvis" parent="Environment/Collection/Bones" index="3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.546037, 0, -0.23661 )
+
+[node name="Sternum" parent="Environment/Collection/Bones" index="4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.445103, 0, -0.435032 )
+
+[node name="Right_ribs" parent="Environment/Collection/Bones" index="5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0385911, 0.445262, -0.23661 )
+
+[node name="mesh" parent="Environment/Collection/Bones/Right_ribs/CollisionShape/model" index="0"]
+transform = Transform( 0.15, 0, 0, 0, -1.78814e-08, -0.15, 0, 0.15, -1.78814e-08, 0.000745177, 0.0143575, -4.91142e-05 )
+
+[node name="Left_ribs" parent="Environment/Collection/Bones" index="6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.377478, 0, -0.23661 )
+
+[node name="Right_clavicle" parent="Environment/Collection/Bones" index="7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.119381, 0, -0.493192 )
+
+[node name="Left_clavicle" parent="Environment/Collection/Bones" index="8"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.119381, 0, 0.202984 )
+
+[node name="Right_scapula" parent="Environment/Collection/Bones" index="9"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.482997, 0, 0.0448647 )
+
+[node name="Left_scapula" parent="Environment/Collection/Bones" index="10"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.119381, 0, 0.0178681 )
+
+[node name="Right_humerus" parent="Environment/Collection/Bones" index="11"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.578381, 0, -0.121351 )
+
+[node name="Left_humerus" parent="Environment/Collection/Bones" index="12"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.386703, 0, 0.246952 )
+
+[node name="Right_ulna" parent="Environment/Collection/Bones" index="13"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.633867, 0, 0.0467658 )
+
+[node name="Left_ulna" parent="Environment/Collection/Bones" index="14"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.157038, 0, -0.0195165 )
+
+[node name="CollisionShape" parent="Environment/Collection/Bones/Left_ulna" index="0"]
+transform = Transform( 0.128, 0, 0, 0, -5.59506e-09, -0.128, 0, 0.128, -5.59506e-09, 0.000745177, 0, 0.0322142 )
+
+[node name="Right_radius" parent="Environment/Collection/Bones" index="15"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.508212, 0, -0.46959 )
+
+[node name="Left_radius" parent="Environment/Collection/Bones" index="16"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.599456, 0, 0.125452 )
+
+[node name="Right_hand" parent="Environment/Collection/Bones" index="17"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.621854, 0, -0.601649 )
+
+[node name="Left_hand" parent="Environment/Collection/Bones" index="18"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.103939, 0.309035, 0.198755 )
+
+[node name="Right_femur" parent="Environment/Collection/Bones" index="19"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.375093, 0, 0.217785 )
+
+[node name="Left_femur" parent="Environment/Collection/Bones" index="20"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.281428, 0, -0.628588 )
+
+[node name="Right_patella" parent="Environment/Collection/Bones" index="21"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.103939, 0, -0.469968 )
+
+[node name="Left_patella" parent="Environment/Collection/Bones" index="22"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.103939, 0, -0.108669 )
+
+[node name="Right_tibia" parent="Environment/Collection/Bones" index="23"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.220214, 0, -0.529865 )
+
+[node name="Left_tibia" parent="Environment/Collection/Bones" index="24"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.121853, 0, -0.35345 )
+
+[node name="Right_fibula" parent="Environment/Collection/Bones" index="25"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.625274, 0, -0.318071 )
+
+[node name="Left_fibula" parent="Environment/Collection/Bones" index="26"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.374288, 0, 0.0999827 )
+
 [node name="reset_button" parent="Environment" instance=ExtResource( 19 )]
-transform = Transform( -0.156698, -8.43367e-07, 0.474811, -5.32907e-15, 0.5, 8.88107e-07, -0.474811, 2.78329e-07, -0.156698, 0.335043, 0.695252, 1.87137 )
-visible = false
+transform = Transform( 2.15353e-08, -0.5, -9.10279e-07, -0.499947, -3.47828e-08, 0.00727759, -0.00727759, 9.09869e-07, -0.499947, 1.39228, 1.44453, 0.807063 )
 
 [connection signal="pressed" from="CanvasLayer/UIPanel/MarginContainer/VBoxContainer/HBox1/HBox2/VBox/VBox/HBox/Previous" to="CanvasLayer/UIPanel/MarginContainer/VBoxContainer/HBox1/HBox2" method="_on_Previous_pressed"]
 [connection signal="pressed" from="CanvasLayer/UIPanel/MarginContainer/VBoxContainer/HBox1/HBox2/VBox/VBox/HBox/Next" to="CanvasLayer/UIPanel/MarginContainer/VBoxContainer/HBox1/HBox2" method="_on_Next_pressed"]
@@ -2094,3 +2188,5 @@ visible = false
 [editable path="Environment/Room/Brazier/Area/Atlas/Spatial/book_half"]
 [editable path="Environment/Room/Brazier/Area/Atlas/Spatial/book_half2"]
 [editable path="Environment/Room/Brazier/Area/Atlas/Spatial/page"]
+[editable path="Environment/Collection"]
+[editable path="Environment/Collection/Silhouette"]

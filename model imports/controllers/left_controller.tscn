@@ -81,7 +81,6 @@ bones/5/bound_children = [  ]
 [node name="left_quest2_mesh" type="MeshInstance" parent="left_quest2_controller_world/Skeleton"]
 mesh = SubResource( 2 )
 skin = SubResource( 3 )
-material/0 = null
 
 [node name="left_quest2_controller_world2" type="Spatial" parent="."]
 transform = Transform( 0.01, 0, 0, 0, -1.19209e-09, -0.01, 0, 0.01, -1.19209e-09, 0, 0, 0 )
